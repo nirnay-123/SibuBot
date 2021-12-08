@@ -69,12 +69,17 @@ heroku/nodejs
 ```
 
 ## Connect With Me
+MY BOT NUMBER👇
+<p align="center">
+ <a href="https://wa.me/+994407325171?text=.help"><img alt="WhatsApp Personal Chat" src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=black"/></a>
+</p>
+
 My Personal Chat👇
 <p align="center">
- <a href="https://wa.me/+919337956084"><img alt="WhatsApp Personal Chat" src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=black"/></a>
+ <a href="https://wa.me/+919337956084?text=Hi%20Sibu"><img alt="WhatsApp Personal Chat" src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=black"/></a>
 </p>
 <p align="center">
- <a href="https://wa.me/+16149448340"><img alt="WhatsApp Personal Chat" src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=black"/></a>
+ <a href="https://wa.me/+16149448340?text=Hy%20Buddy"><img alt="WhatsApp Personal Chat" src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=black"/></a>
 </p>
 
 My Whatsapp Group👇
