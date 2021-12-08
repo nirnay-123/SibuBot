@@ -6464,7 +6464,7 @@ Sibu.sendMessage(from, stdout, text, term)
     if (isGroup && budy != undefined) {
     } else {
       console.log(
-        color("[Doge Bot]", "red"),
+        color("[𝐒𝐢𝐛𝐮 𝐁𝐨𝐭]", "red"),
         "𝐒𝐢𝐛𝐮 𝐁𝐨𝐭",
         color(sender.split("@")[0])
       );
