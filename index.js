@@ -2798,12 +2798,12 @@ break
 					const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 					buff = await Sibu.downloadMediaMessage(encmedia)
 					for (let _ of anu) {
-						Sibu.sendMessage(_.jid, buff, image, {quoted:fakestatus ,caption: `「  *𝐒𝐢𝐛𝐮 𝐁𝐨𝐭 BROADCAST* 」\n\n${ini_bc}`})
+						Sibu.sendMessage(_.jid, buff, image, {quoted:fakestatus ,caption: `「  *𝐒𝐢𝐛𝐮 𝐁𝐨𝐭 𝐁𝐑𝐎𝐀𝐃𝐂𝐀𝐒𝐓* 」\n\n${ini_bc}`})
 					}
 					reply('```Success Broadcast```')
 					} else {
 					for (let _ of anu) {
-					Sibu.sendMessage(_.jid, `*𝐒𝐢𝐛𝐮 𝐁𝐨𝐭 BROADCAST*\n${ini_bc}`, text, { contextInfo: { mentionedJid: [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true })
+					Sibu.sendMessage(_.jid, `*𝐒𝐢𝐛𝐮 𝐁𝐨𝐭 𝐁𝐑𝐎𝐀𝐃𝐂𝐀𝐒𝐓*\n${ini_bc}`, text, { contextInfo: { mentionedJid: [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true })
 					}
 					reply('```Success Broadcast```')
 					}
