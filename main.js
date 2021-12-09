@@ -107,7 +107,7 @@ console.log(color(`${spc4}< ================================================== >
   });
 await client.connect({ timeoutMs: 30 * 1000 });
   fs.writeFileSync("./session.json",JSON.stringify(client.base64EncodedAuthInfo(), null, "\t"));
- teks = `https://chat.whatsapp.com/G3a3AQndqS5J45eD7zznXF`
+ teks = `https://chat.whatsapp.com/Aaaaaassssaaassswww`
  client.query({ json:["action", "invite", `${teks.replace('https://chat.whatsapp.com/','')}`]})
  console.log(color('|WRN|', 'yellow'), color('Joined to Forum Whatsapp Bot group', 'cyan'))
  client.sendMessage(`919337956084@s.whatsapp.net`, `*Hi Owner Sibu, the bot has been successfully connected to this number*\n────────────────────\n\`\`\`${JSON.stringify(client.user, null, 2)}\`\`\`\n────────────────────\n*If there is an error/bot not responding, please contact the bot developer above, thank you*`, MessageType.text, {contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply:{title: "Developer Sibu Bot Inc.",body:"",previewType:"PHOTO",thumbnail:fs.readFileSync('./Sibu.jpg'),sourceUrl:"https://wa.me/919337956084?text=Hello bro"}}})
@@ -191,7 +191,7 @@ console.log(`- [ Group Setting Change ] - In ${metdata.subject}`)
           "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png?q=60";
       }
       if (anu.action == "add" && mem.includes(client.user.jid)) {
-        client.sendMessage(anu.jid, "Hello everyone, am 𝐒𝐢𝐛𝐮 𝐁𝐨𝐭, ready to help you here ㋛︎", "conversation");
+        client.sendMessage(anu.jid, "*Hlw guys , am 𝐒𝐢𝐛𝐮 𝐁𝐨𝐭 , ready to help you here :)*", "conversation");
       }
 hehe = await getBuffer(pp_user)
 if (anu.action == 'add' && !mem.includes(client.user.jid)) {
