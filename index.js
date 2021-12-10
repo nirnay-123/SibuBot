@@ -4081,7 +4081,7 @@ break
             var nomor = pc.split("|")[0];
             var org = pc.split("|")[1];
             Sibu.sendMessage(nomor+'@s.whatsapp.net', org, MessageType.text)   
-            reply(`Sukses mengirim chat:\n${org},@${nomor}`)
+            reply(`Successfully send chat:\n${org},@${nomor}`)
             break
 case 'viewonce':
 res = await Sibu.prepareMessageFromContent(from,{
