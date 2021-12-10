@@ -38,13 +38,13 @@ heroku/nodejs
 
 ## `CHANGE SESSION`
 
-[`Click Here`](https://github.com/Sibuuu07/DogeBot/blob/master/session.json#L1)
+[`Click Here`](https://github.com/Sibuuu07/SibuBot/blob/master/session.json#L1)
 
 # Installation
 ## Clone Repo & Installation dependencies
 ```bash
-🦄 git clone https://github.com/Sibuuu07/DogeBot.git
-🦄 cd DogeBot
+🦄 git clone https://github.com/Sibuuu07/SibuBot.git
+🦄 cd SibuBot
 🦄 npm start
 ```
 ## For Termux
@@ -59,8 +59,8 @@ heroku/nodejs
 🦄 pkg install ffmpeg -y 
 🦄 pkg install wget
 🦄 pkg install imagemagick -y
-🦄 git clone https://github.com/Sibuuu07/DogeBot
-🦄 cd DogeBot
+🦄 git clone https://github.com/Sibuuu07/SibuBot
+🦄 cd SibuBot
 🦄 ls
 🦄 rm -rf session.json
 🦄 npm install
@@ -91,4 +91,4 @@ My Whatsapp Group👇
 
 # Thanks To
 * [`Baileys`](https://github.com/adiwajshing/Baileys)
-* [`Xeon`](https://github.com/Sibuuu07)
+* [`Sibu`](https://github.com/Sibuuu07)
