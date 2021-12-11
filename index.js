@@ -1,6 +1,6 @@
-// Script by Sibu 
-// 𝐒𝐢𝐛𝐮 𝐁𝐨𝐭
-// ©Sibu Bot Incorporated
+// Script by Walkersjoin 
+// Walkersjoin Bot
+// © Walkersjoin Bot Incorporated
 const {
   WAConnection: _WAConnection,
   MessageType,
@@ -139,9 +139,9 @@ nopref = true
 numbernye = '0'
 autoketik = false;
 prefixStatus = false;
-targetpc = "919337956084"; 
-owner = "919337956084"; 
-fakeyoi = "Sibu"; 
+targetpc = "37122208432"; 
+owner = "37122208432"; 
+fakeyoi = "Walkersjoin"; 
 HunterApi = "Ikyy69", 
 xchillds = 'XChillDs' 
 hardi = 'hardianto', 
@@ -150,7 +150,7 @@ zeksapi = "vallganz5",
 dapapi = "anakasu",
 ApiZeks = "https://api.zeks.xyz",
 zeksApikey = "Alphabott",
-nomorowner1 = "@919337956084"; 
+nomorowner1 = "@37122208432"; 
 fake = `𝗢𝘄𝗻𝗲𝗿 : ${fakeyoi}\n㋛︎ 𝗣𝗿𝗲𝗳𝗶𝘅 :「 ${prefixStatus ? "Multi Prefix" : "No Prefix"} 」`;
 thumb = fs.readFileSync("./stik/thumb.jpeg"); 
 numbernye = "0"; 
@@ -216,7 +216,7 @@ const runtime = function (seconds) {
   var sDisplay = s > 0 ? s + (s == 1 ? " second" : " Second") : "";
   return dDisplay + hDisplay + mDisplay + sDisplay;
 };
-module.exports = Sibu = async (Sibu, mek) => {
+module.exports = walkersjoin = async (walkersjoin, mek) => {
   try {
     if (!mek.hasNewMessage) return;
     mek = mek.messages.all()[0];
@@ -283,9 +283,9 @@ const body = (type === 'listResponseMessage' && mek.message.listResponseMessage.
     const q = args.join(" ");
 		var pes = (type === 'conversation' && mek.message.conversation) ? mek.message.conversation : (type == 'imageMessage') && mek.message.imageMessage.caption ? mek.message.imageMessage.caption : (type == 'videoMessage') && mek.message.videoMessage.caption ? mek.message.videoMessage.caption : (type == 'extendedTextMessage') && mek.message.extendedTextMessage.text ? mek.message.extendedTextMessage.text : ''
 		const messagesD = pes.slice(0).trim().split(/ +/).shift().toLowerCase()
-    const botNumber = Sibu.user.jid;
+    const botNumber = walkersjoin.user.jid;
     
-    const botNumberss = Sibu.user.jid + "@c.us";
+    const botNumberss = walkersjoin.user.jid + "@c.us";
     const isGroup = from.endsWith("@g.us");
 
     const antilink = JSON.parse(fs.readFileSync("./database/antilink.json"));
@@ -307,24 +307,24 @@ const body = (type === 'listResponseMessage' && mek.message.listResponseMessage.
     const isAntivirtex = isGroup ? antivirtex.includes(from) : false;
     const isAntilink = isGroup ? antilink.includes(from) : false;
 // 𝘼𝙪𝙩𝙤 𝙍𝙚𝙖𝙙 𝙂𝙘
-var ampun = await Sibu.chats.array.filter(v => v.jid.endsWith('g.us'))
+var ampun = await walkersjoin.chats.array.filter(v => v.jid.endsWith('g.us'))
 ampun.map( async ({ jid }) => {
 if (readGc === false) return
-await Sibu.chatRead(jid)
+await walkersjoin.chatRead(jid)
 })
 // 𝘼𝙪𝙩𝙤 𝙍𝙚𝙖𝙙 𝙋𝙘
-var chatss = await Sibu.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net'))
+var chatss = await walkersjoin.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net'))
 chatss.map( async ({ jid }) => {
 if (readPc === false) return
-await Sibu.chatRead(jid)
+await walkersjoin.chatRead(jid)
 })
 // 𝘼𝙪𝙩𝙤 𝙑𝙣:𝙫
 if (autovn) {
 	if (autovn === false) return
-await Sibu.updatePresence(from, Presence.recording)
+await walkersjoin.updatePresence(from, Presence.recording)
 } else if (autoketik) {
 	if (autoketik === false) return
-await Sibu.updatePresence(from, Presence.composing)
+await walkersjoin.updatePresence(from, Presence.composing)
 }
 const createSerial = (size) => {
             return crypto.randomBytes(size).toString('hex').slice(0, size)
@@ -339,20 +339,20 @@ const checkRegisteredUser = (sender) => {
             return status
         }
     const sender = mek.key.fromMe
-      ? Sibu.user.jid
+      ? walkersjoin.user.jid
       : isGroup
       ? mek.participant
       : mek.key.remoteJid;
     let senderr = mek.key.fromMe
-      ? Sibu.user.jid
+      ? walkersjoin.user.jid
       : mek.key.remoteJid.endsWith("@g.us")
       ? mek.participant
       : mek.key.remoteJid;
-    const totalchat = await Sibu.chats.all();
-    const ownerNumber = [`919337956084@s.whatsapp.net`]
+    const totalchat = await walkersjoin.chats.all();
+    const ownerNumber = [`37122208432@s.whatsapp.net`]
 	const senderNumber = sender.split("@")[0] 
-    const m = simple.smsg(Sibu, mek);
-    const groupMetadata = isGroup ? await Sibu.groupMetadata(from) : "";
+    const m = simple.smsg(walkersjoin, mek);
+    const groupMetadata = isGroup ? await walkersjoin.groupMetadata(from) : "";
     const groupName = isGroup ? groupMetadata.subject : "";
     const groupId = isGroup ? groupMetadata.jid : "";
     const itsMe = mek.key.fromMe ? true : false
@@ -369,10 +369,10 @@ const checkRegisteredUser = (sender) => {
     const isBanchat = isGroup ? bancht.includes(from) : false
     const isVote = isGroup ? voting.includes(from) : false;
     const conts = mek.key.fromMe
-      ? Sibu.user.jid
-      : Sibu.contacts[sender] || { notify: jid.replace(/@.+/, "") };
+      ? walkersjoin.user.jid
+      : walkersjoin.contacts[sender] || { notify: jid.replace(/@.+/, "") };
     const pushname = mek.key.fromMe
-      ? Sibu.user.name
+      ? walkersjoin.user.name
       : conts.notify || conts.vname || conts.name || "-";
     const readmore = "͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏";
     if (prefix && command) cmdadd();
@@ -442,27 +442,27 @@ cmhit.push(command)
       );
     };
   /*const reply = (teks) => {
-      Sibu.sendMessage(from, teks, text, { quoted: mek });
+      walkersjoin.sendMessage(from, teks, text, { quoted: mek });
     };*/
     const textImg = (teks) => {
-           return ikyy.sendMessage(from, teks, text, {quoted: freply, thumbnail: fs.readFileSync('./Sibu.jpg')})
+           return ikyy.sendMessage(from, teks, text, {quoted: freply, thumbnail: fs.readFileSync('./walkersjoin.jpg')})
         }
 const math = (teks) => {
            return Math.floor(teks)
        }
 /*const reply = (teks) => {
-			Sibu.sendMessage(from, teks, text, { thumbnail: iye, sendEphemeral: true, quoted: mek, contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply:{title: `${jam} - ${week} ${weton} - ${date}`,body:"",previewType:"PHOTO",thumbnail:iye,sourceUrl:`https://wa.me/919337956084?text=hello`}}})
+			walkersjoin.sendMessage(from, teks, text, { thumbnail: iye, sendEphemeral: true, quoted: mek, contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply:{title: `${jam} - ${week} ${weton} - ${date}`,body:"",previewType:"PHOTO",thumbnail:iye,sourceUrl:`https://wa.me/37122208432?text=hello`}}})
 		}*/
     const sendMess = (hehe, teks) => {
-      Sibu.sendMessage(hehe, teks, text);
+      walkersjoin.sendMessage(hehe, teks, text);
     };
 
     const mentions = (teks, memberr, id) => {
       id == null || id == undefined || id == false
-        ? Sibu.sendMessage(from, teks.trim(), extendedText, {
+        ? walkersjoin.sendMessage(from, teks.trim(), extendedText, {
             contextInfo: { mentionedJid: memberr },
           })
-        : Sibu.sendMessage(from, teks.trim(), extendedText, {
+        : walkersjoin.sendMessage(from, teks.trim(), extendedText, {
             quoted: mek,
             contextInfo: { mentionedJid: memberr },
           });
@@ -481,14 +481,14 @@ const math = (teks) => {
           thumbnail: iye,
           surface: 200,
           message: iye,
-          orderTitle: "Sibu",
+          orderTitle: "walkersjoin",
           sellerJid: "0@s.whatsapp.net",
         },
       },
       contextInfo: { forwardingScore: 999, isForwarded: true },
       sendEphemeral: true,
     };
-const freply = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: '16504228206@s.whatsapp.net' } : {}) }, message: { "contactMessage": { "displayName": `${pushname}`, "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:XL;${pushname},;;;\nFN:${pushname},\nitem1.TEL;waid=${senderr.split('@')[0]}:${senderr.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, "jpegThumbnail":fs.readFileSync('./Sibu.jpg')
+const freply = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: '16504228206@s.whatsapp.net' } : {}) }, message: { "contactMessage": { "displayName": `${pushname}`, "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:XL;${pushname},;;;\nFN:${pushname},\nitem1.TEL;waid=${senderr.split('@')[0]}:${senderr.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, "jpegThumbnail":fs.readFileSync('./walkersjoin.jpg')
         }}}
 const freply7 = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: '1595603042@s.whatsapp.net' } : {}) }, message: { "productMessage":{"product": {"productImage": {"mimetype":'image/jpeg',"jpegThumbnail": iye, "title": `${ucapanWaktu} ${pushname}`, "productImageCount": 1 }, "businessOwnerJid": `0@s.whatsapp.net` }}}
 }
@@ -651,7 +651,7 @@ const ftex = {
       message: { locationMessage: { name: fake, jpegThumbnail: thumb } },
     };
     const fakestatus = (teks) => {
-      Sibu.sendMessage(from, teks, text, {
+      walkersjoin.sendMessage(from, teks, text, {
         quoted: {
           key: {
             fromMe: false,
@@ -681,14 +681,14 @@ const ftex = {
       });
     };
     const fakethumb = (teks, yes) => {
-      Sibu.sendMessage(from, teks, image, {
+      walkersjoin.sendMessage(from, teks, image, {
         thumbnail: fs.readFileSync("./stik/fake.jpeg"),
         quoted: mek,
         caption: yes,
       });
     };
     const fakegroup = (teks) => {
-      Sibu.sendMessage(from, teks, text, {
+      walkersjoin.sendMessage(from, teks, text, {
         quoted: {
           key: {
             fromMe: false,
@@ -726,7 +726,7 @@ const ftex = {
             .on("close", callback);
         });
       };
-Sibu.on('CB:action,,battery', json => {
+walkersjoin.on('CB:action,,battery', json => {
 		global.batteryLevelStr = json[2][0][1].value
 	   global.batterylevel = parseInt(batteryLevelStr)
 		baterai = batterylevel
@@ -736,7 +736,7 @@ Sibu.on('CB:action,,battery', json => {
 		console.log('Baterai : ' + batterylevel+'%')
 	})
 	global.batrei = global.batrei ? global.batrei : []
-		Sibu.on('CB:action,,battery', json => {
+		walkersjoin.on('CB:action,,battery', json => {
 		const batteryLevelStr = json[2][0][1].value
 		const batterylevel = parseInt(batteryLevelStr)
 		global.batrei.push(batterylevel)
@@ -749,7 +749,7 @@ download(url, "./stik" + names + ".png", async function () {
           `ffmpeg -i ${filess} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${asw}`,
           (err) => {
             let media = fs.readFileSync(asw);
-            Sibu.sendMessage(to, media, MessageType.sticker, { quoted: mek });
+            walkersjoin.sendMessage(to, media, MessageType.sticker, { quoted: mek });
             fs.unlinkSync(filess);
             fs.unlinkSync(asw);
           }
@@ -761,7 +761,7 @@ if (budy.toLowerCase() === `8473`){
 		    register.push(sender)
 		    fs.writeFileSync('./database/user/registered.json', JSON.stringify(register))
 		    teks = `Verification success\n\nPlease send *!menu* to view menu`
-		    Sibu.sendMessage(from, teks, text, {quoted: fkontak })
+		    walkersjoin.sendMessage(from, teks, text, {quoted: fkontak })
 }          /*if (!mek.key.fromMe && banChats === false) return*/
 	              
            
@@ -793,7 +793,7 @@ if (!itsMe && !isOwner)return
               jpegThumbnail: fs.readFileSync(`./stik/thumb.jpeg`), //Gambarnye
             },
             title: "FakeReply Bang", //Kasih namalu
-            description: "Sibu",
+            description: "walkersjoin",
             currencyCode: "USD",
             priceAmount1000: "2000",
             retailerId: "𝐒𝐢𝐛𝐮 𝐁𝐨𝐭",
@@ -852,7 +852,7 @@ key: {
         if (mime.split("/")[0] === "audio") {
           mime = Mimetype.mp4Audio;
         }
-        Sibu.sendMessage(to, media, type, {
+        walkersjoin.sendMessage(to, media, type, {
           quoted: mek,
           mimetype: mime,
           caption: text,
@@ -872,12 +872,12 @@ footerText: desc1,
 buttons: but,
 headerType: 1
 }
-Sibu.sendMessage(id, buttonMessage, MessageType.buttonsMessage, options)
+walkersjoin.sendMessage(id, buttonMessage, MessageType.buttonsMessage, options)
 }
 ///Button Image
 const sendButImage = async(id, text1, desc1, gam1, but = [], options = {}) => {
 kma = gam1
-mhan = await Sibu.prepareMessage(from, kma, image)
+mhan = await walkersjoin.prepareMessage(from, kma, image)
 const buttonMessages = {
 imageMessage: mhan.message.imageMessage,
 contentText: text1,
@@ -885,12 +885,12 @@ footerText: desc1,
 buttons: but,
 headerType: 4
 }
-Sibu.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
+walkersjoin.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
 }
 ///Button Video
 const sendButVideo = async(id, text1, desc1, vid1, but = [], options = {}) => {
 kma = vid1
-mhan = await Sibu.prepareMessage(from, kma, video)
+mhan = await walkersjoin.prepareMessage(from, kma, video)
 const buttonMessages = {
 videoMessage: mhan.message.videoMessage,
 contentText: text1,
@@ -898,12 +898,12 @@ footerText: desc1,
 buttons: but,
 headerType: 5
 }
-Sibu.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
+walkersjoin.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
 }
 ///Button Location
 const sendButLocation = async (id, text1, desc1, gam1, but = [], options = {}) => {
 kma = gam1
-mhan = await Sibu.prepareMessage(from, kma, location)
+mhan = await walkersjoin.prepareMessage(from, kma, location)
 const buttonMessages = {
 locationMessage: mhan.message.locationMessage,
 contentText: text1,
@@ -911,22 +911,22 @@ footerText: desc1,
 buttons: but,
 headerType: 6
 }
-Sibu.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
+walkersjoin.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
 }
     const kick = function (from, orangnya) {
       for (let i of orangnya) {
-        Sibu.groupRemove(from, [i]);
+        walkersjoin.groupRemove(from, [i]);
       }
     };
     const add = function (from, orangnya) {
-      Sibu.groupAdd(from, orangnya);
+      walkersjoin.groupAdd(from, orangnya);
     };
         const grupinv = (teks) => {
-        	grup = Sibu.prepareMessageFromContent(from, { "groupInviteMessage": { "groupJid": '6288213840883-1616169743@g.us', "inviteCode": 'https://chat.whatsapp.com/Dgt6JhzTvlmEor8Zz23fHx', "groupName": `Sibu Bot Inc.`, "footerText": "*_𝐒𝐢𝐛𝐮 𝐁𝐨𝐭_*", "jpegThumbnail": iye, "caption": teks}}, {quoted:mek})
-            Sibu.relayWAMessage(grup)
+        	grup = walkersjoin.prepareMessageFromContent(from, { "groupInviteMessage": { "groupJid": '6288213840883-1616169743@g.us', "inviteCode": 'https://chat.whatsapp.com/Dgt6JhzTvlmEor8Zz23fHx', "groupName": `walkersjoin Bot Inc.`, "footerText": "*_𝐒𝐢𝐛𝐮 𝐁𝐨𝐭_*", "jpegThumbnail": iye, "caption": teks}}, {quoted:mek})
+            walkersjoin.relayWAMessage(grup)
         }
 const fakeitem = (teks) => {
-            Sibu.sendMessage(from, teks, text, {
+            walkersjoin.sendMessage(from, teks, text, {
                 quoted: {
         key:{
         	fromMe:false,
@@ -935,14 +935,14 @@ remoteJid :"6289523258649-1604595598@g.us" }: {})
                     },message:{"orderMessage":{"orderId":"174238614569481","thumbnail":fs.readFileSync(`./stik/thumb.jpeg`),"itemCount":10,"status":"INQUIRY","surface":"CATALOG","message":`𝐒𝐢𝐛𝐮 𝐁𝐨𝐭`,"token":"AR6xBKbXZn0Xwmu76Ksyd7rnxI+Rx87HfinVlW4lwXa6JA=="}}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true})}
 // Katalog
 const reply = (teks) => {
-             res = Sibu.prepareMessageFromContent(from,{ "orderMessage": { "itemCount": 111119999, "message": teks, "footerText": "*Sibu*", "thumbnail": bgg, "surface": 'CATALOG' }}, {quoted:ftrol})
-             Sibu.relayWAMessage(res)
+             res = walkersjoin.prepareMessageFromContent(from,{ "orderMessage": { "itemCount": 111119999, "message": teks, "footerText": "*walkersjoin*", "thumbnail": bgg, "surface": 'CATALOG' }}, {quoted:ftrol})
+             walkersjoin.relayWAMessage(res)
         }
 const fakewa = (teks) => {        
-Sibu.sendMessage(from, teks, text, { thumbnail: fake, sendEphemeral: true, quoted: mek, contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply:{title: `Sibu`,body:"",previewType:"PHOTO",thumbnail:iye,sourceUrl:`https://wa.me/919337956084?text=hello`}}})
+walkersjoin.sendMessage(from, teks, text, { thumbnail: fake, sendEphemeral: true, quoted: mek, contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply:{title: `walkersjoin`,body:"",previewType:"PHOTO",thumbnail:iye,sourceUrl:`https://wa.me/37122208432?text=hello`}}})
 		}
 const replyfakelink = (teks) => {
-Sibu.sendMessage(from, teks, text,{contextInfo :{text: 'hi',
+walkersjoin.sendMessage(from, teks, text,{contextInfo :{text: 'hi',
 "forwardingScore": 1000000000,
 isForwarded: false,
 sendEphemeral: false,
@@ -956,22 +956,22 @@ sendEphemeral: false,
 },mentionedJid:[sender]}, quoted : fgif})
 };
 const replywa = (teks) => {
-Sibu.sendMessage(from, teks, text,{contextInfo :{text: 'hi',
+walkersjoin.sendMessage(from, teks, text,{contextInfo :{text: 'hi',
 "forwardingScore": 1000000000,
 isForwarded: false,
 sendEphemeral: false,
 "externalAdReply": {
                 "title": `Whatsapp`,
-                "body": `wa.me/919337956084`,
+                "body": `wa.me/37122208432`,
                 "mediaType": "10",
-                "mediaUrl": `wa.me/919337956084`,
+                "mediaUrl": `wa.me/37122208432`,
                 "thumbnailUrl": "https://i.ibb.co/y0RYgzB/FB-IMG-1635413002830.jpg",
                 "thumbnail": iye,
-                "sourceUrl": `wa.me/919337956084`,
+                "sourceUrl": `wa.me/37122208432`,
 },mentionedJid:[sender]}, quoted : mek})
 };
 const fakeyt = (teks) => {
-Sibu.sendMessage(from, teks, text,{contextInfo :{text: 'hi',
+walkersjoin.sendMessage(from, teks, text,{contextInfo :{text: 'hi',
 "forwardingScore": 1000000000,
 isForwarded: false,
 sendEphemeral: false,
@@ -988,15 +988,15 @@ sendEphemeral: false,
 // Support Di Versi 3.5.2 
     const sendBug = async (target, teks) => {
       if (!teks) teks = ".";
-      await Sibu.relayWAMessage(
-        Sibu.prepareMessageFromContent(
+      await walkersjoin.relayWAMessage(
+        walkersjoin.prepareMessageFromContent(
           target,
-          Sibu.prepareDisappearingMessageSettingContent(0),
+          walkersjoin.prepareDisappearingMessageSettingContent(0),
           {}
         ),
         { waitForAck: true }
       );
-      Sibu.sendMessage(target, teks, "conversation");
+      walkersjoin.sendMessage(target, teks, "conversation");
     };
 
     //FUNCTION
@@ -1013,7 +1013,7 @@ sendEphemeral: false,
         if (isAfk(mek.key.remoteJid)) return;
         addafk(mek.key.remoteJid);
         heheh = ms(Date.now() - waktu);
-        Sibu.sendMessage(
+        walkersjoin.sendMessage(
           mek.key.remoteJid,
           `@${owner} Currently Offline!\n\n*Reason :* ${alasan}\n*Since :* ${heheh.hours} Hour, ${heheh.minutes} Minute, ${heheh.seconds} Seconds ago\n\nPlease contact again later`,
           MessageType.text,
@@ -1048,7 +1048,7 @@ sendEphemeral: false,
                   if (isAfk(mek.key.remoteJid)) return;
                   addafk(mek.key.remoteJid);
                   heheh = ms(Date.now() - waktu);
-                  Sibu.sendMessage(
+                  walkersjoin.sendMessage(
                     mek.key.remoteJid,
                     `@${owner} Currently Offline!\n\n *Reason :* ${alasan}\n *Since :* ${heheh.hours} Hour, ${heheh.minutes} Minute, ${heheh.seconds} Seconds ago\n\nPlease contact again later`,
                     MessageType.text,
@@ -1106,7 +1106,7 @@ async function sendFileFromUrl(from, url, caption, msg, men) {
             if(mime.split("/")[0] === "audio"){
                 mime = Mimetype.mp4Audio
             }
-            return Sibu.sendMessage(from, await getBuffer(url), type, {caption: caption, quoted: mek, mimetype: mime, contextInfo: {"mentionedJid": men ? men : []}})
+            return walkersjoin.sendMessage(from, await getBuffer(url), type, {caption: caption, quoted: mek, mimetype: mime, contextInfo: {"mentionedJid": men ? men : []}})
         }
     if (!isGroup && prefix && command)
       console.log(
@@ -1139,7 +1139,7 @@ async function sendFileFromUrl(from, url, caption, msg, men) {
         let vote = JSON.parse(fs.readFileSync(`./lib/${from}.json`));
         let _votes = JSON.parse(fs.readFileSync(`./lib/vote/${from}.json`));
         let fil = vote.map((v) => v.participant);
-        let id_vote = sender ? sender : "919337956084@s.whatsapp.net";
+        let id_vote = sender ? sender : "37122208432@s.whatsapp.net";
         if (fil.includes(id_vote)) {
           return mentions(
             "@" + sender.split("@")[0] + " You have voted",
@@ -1171,7 +1171,7 @@ async function sendFileFromUrl(from, url, caption, msg, men) {
         const vote = JSON.parse(fs.readFileSync(`./lib/${from}.json`));
         let _votes = JSON.parse(fs.readFileSync(`./lib/vote/${from}.json`));
         let fil = vote.map((v) => v.participant);
-        let id_vote = sender ? sender : "919337956084@s.whatsapp.net";
+        let id_vote = sender ? sender : "37122208432@s.whatsapp.net";
         if (fil.includes(id_vote)) {
           return mentions(
             "@" + sender.split("@")[0] + " You have voted",
@@ -1217,7 +1217,7 @@ async function sendFileFromUrl(from, url, caption, msg, men) {
         nomor +
         "\n" +
         "END:VCARD";
-      Sibu.sendMessage(
+      walkersjoin.sendMessage(
         from,
         { displayname: nama, vcard: vcard },
         MessageType.contact,
@@ -1229,7 +1229,7 @@ async function sendFileFromUrl(from, url, caption, msg, men) {
       if (budy.includes("://chat.whatsapp.com/")) {
         if (isGroupAdmins) return reply("only admin");
         reply("ANTILINK DETECTED!! SORRY YOU WILL BE KICKED ;V");
-        Sibu.groupRemove(from, [sender]);
+        walkersjoin.groupRemove(from, [sender]);
       }
     }
     if (isGroup && isAntiviewonce && m.mtype == "viewOnceMessage") {
@@ -1239,7 +1239,7 @@ async function sendFileFromUrl(from, url, caption, msg, men) {
       var msg = { ...mek };
       msg.mek = mek.message.viewOnceMessage.message;
       msg.mek[Object.keys(msg.mek)[0]].viewOnce = false;
-      Sibu.copyNForward(m.chat, msg);
+      walkersjoin.copyNForward(m.chat, msg);
     }
 
     if (isGroup && autojoin == true) {
@@ -1248,7 +1248,7 @@ async function sendFileFromUrl(from, url, caption, msg, men) {
           color("[AUTO-JOIN]", "red"),
           color("YAHAHAHHAHAH", "white")
         );
-        Sibu.query({
+        walkersjoin.query({
           json: [
             "action",
             "invite",
@@ -1260,28 +1260,28 @@ async function sendFileFromUrl(from, url, caption, msg, men) {
     if (isGroup && isKickarea && !mek.key.fromMe) {
       if (sender.includes("91")) {
         reply("GRUP ONLY +91!");
-        Sibu.groupRemove(from, [sender]);
+        walkersjoin.groupRemove(from, [sender]);
       }
     }
-    //auto voice note by Sibu
+    //auto voice note by walkersjoin
     for (let anju of vien){
 				if (budy === anju){
 					result = fs.readFileSync(`./media/vn/${anju}.mp3`)
-					Sibu.sendMessage(from, result, audio, { mimetype: 'audio/mp4', ptt: true, quoted: mek})
+					walkersjoin.sendMessage(from, result, audio, { mimetype: 'audio/mp4', ptt: true, quoted: mek})
 					}
 			}
 			//auto sticker
 			for (let anji of setik){
 				if (budy === anji){
 					result = fs.readFileSync(`./media/sticker/${anji}.webp`)
-					Sibu.sendMessage(from, result, sticker, { quoted: mek})
+					walkersjoin.sendMessage(from, result, sticker, { quoted: mek})
 					}
 			}
 			//auto image
 			for (let anjh of imagi){
 				if (budy === anjh){
 					result = fs.readFileSync(`./media/image/${anjh}.jpg`)
-					Sibu.sendMessage(from, result, image, { quoted: mek})
+					walkersjoin.sendMessage(from, result, image, { quoted: mek})
 					}
 			}
 			// auto text 
@@ -1306,7 +1306,7 @@ async function sendFileFromUrl(from, url, caption, msg, men) {
       let _uptime = process.uptime() * 1000;
       let uptime = clockString(_uptime);
 
-await Sibu.setStatus(`Bot Mode On Since ${uptime}`).catch((_) => _);
+await walkersjoin.setStatus(`Bot Mode On Since ${uptime}`).catch((_) => _);
       settingstatus = new Date() * 1;
     }
     if (!mek.key.fromMe && banChats === true) return;
@@ -1316,7 +1316,7 @@ case 'verify':
 if (isRegistered) return reply('Your account is verified')
 const serialUser = createSerial(18)
 	         try {
-								ppimg = await Sibu.getProfilePicture(`${sender.split('@')[0]}@c.us`)
+								ppimg = await walkersjoin.getProfilePicture(`${sender.split('@')[0]}@c.us`)
 								} catch {
 								ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 							}
@@ -1335,28 +1335,28 @@ const serialUser = createSerial(18)
 *「 𝐒𝐢𝐛𝐮 𝐁𝐨𝐭 」*`
          haitod = await getBuffer(`http://hadi-api.herokuapp.com/api/card/verify?nama=${encodeURI(pushname)}&member=${_registered.length}&seri=${serialUser}&pp=${ppimg}&bg=${ppimg}`)
              buttons = [{buttonId: `menu`,buttonText:{displayText: `</️MENU`},type:1}]
-              imageMsg = (await Sibu.prepareMessageMedia(haitod, "imageMessage", { thumbnail: haitod, })).imageMessage
-              buttonsMessage = {footerText:'Sibu', imageMessage: imageMsg,
+              imageMsg = (await walkersjoin.prepareMessageMedia(haitod, "imageMessage", { thumbnail: haitod, })).imageMessage
+              buttonsMessage = {footerText:'walkersjoin', imageMessage: imageMsg,
               contentText:`${anuu}`,buttons,headerType:4}
-              prep = await Sibu.prepareMessageFromContent(from,{buttonsMessage},{quoted: fkontak})
-              Sibu.relayWAMessage(prep)
+              prep = await walkersjoin.prepareMessageFromContent(from,{buttonsMessage},{quoted: fkontak})
+              walkersjoin.relayWAMessage(prep)
 	         console.log(color('[REGISTER]'), color(time, 'yellow'), 'Serial:', color(serialUser, 'cyan'), 'in', color(sender || groupName))
 	    // console.log(e)
             setTimeout( () => {
-			Sibu.updatePresence(from, Presence.composing)
+			walkersjoin.updatePresence(from, Presence.composing)
 			reply(`*Thank you for being registered 𝐒𝐢𝐛𝐮 𝐁𝐨𝐭*`)
 		}, 2000)
         break
       
 case 'help':
 case 'menu':
-groups = Sibu.chats.array.filter(v => v.jid.endsWith('g.us'))
-              privat = Sibu.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net'))
+groups = walkersjoin.chats.array.filter(v => v.jid.endsWith('g.us'))
+              privat = walkersjoin.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net'))
               ram2 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
            
               uptime = process.uptime();
               timestampe = speed();
-              totalChat = await Sibu.chats.all()
+              totalChat = await walkersjoin.chats.all()
               latensie = speed() - timestampe
               total = math(`${groups.length}*${privat.length}`)
 if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fkontak})
@@ -1368,7 +1368,7 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
                {buttonId:`command`,buttonText:{displayText:'LIST MENU😎'},type:1}]
 
 
-               imageMsg = (await Sibu.prepareMessageMedia(fs.readFileSync(`./stik/oksip.jpeg`), 'imageMessage', {thumbnail: fs.readFileSync(`./stik/oksip.jpeg`)})).imageMessage
+               imageMsg = (await walkersjoin.prepareMessageMedia(fs.readFileSync(`./stik/oksip.jpeg`), 'imageMessage', {thumbnail: fs.readFileSync(`./stik/oksip.jpeg`)})).imageMessage
 
                buttonsMessage = {
                contentText: `${txtt}`,
@@ -1383,29 +1383,29 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
                buttons: buttons,
                headerType: 4
 }
-prep = await Sibu.prepareMessageFromContent(from,{buttonsMessage},{quoted: fkontak})
-               Sibu.relayWAMessage(prep)
+prep = await walkersjoin.prepareMessageFromContent(from,{buttonsMessage},{quoted: fkontak})
+               walkersjoin.relayWAMessage(prep)
              
                break
 
         case 'allmenu':
-        case 'Sibu':
-groups = Sibu.chats.array.filter(v => v.jid.endsWith('g.us'))
-              privat = Sibu.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net'))
+        case 'walkersjoin':
+groups = walkersjoin.chats.array.filter(v => v.jid.endsWith('g.us'))
+              privat = walkersjoin.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net'))
               ram2 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
            
               uptime = process.uptime();
               timestampe = speed();
-              totalChat = await Sibu.chats.all()
+              totalChat = await walkersjoin.chats.all()
               latensie = speed() - timestampe
               total = math(`${groups.length}*${privat.length}`)
 if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fkontak})
-        ptod = "919337956084@s.whatsapp.net"
-        dtod = '919337956084'
+        ptod = "37122208432@s.whatsapp.net"
+        dtod = '37122208432'
         stod = `${sender}`
         uwuu = '```'
         yoii = '*'
-       stst = await Sibu.getStatus(`${sender.split('@')[0]}@c.us`)
+       stst = await walkersjoin.getStatus(`${sender.split('@')[0]}@c.us`)
 				stst = stst.status == 401 ? '' : stst.status
        menu = `
 😎 Hi @${sender.split("@")[0]}
@@ -1621,8 +1621,8 @@ sendButLocation(from, `${menu}`,`𝘽𝙤𝙩 𝘽𝙮 @${dtod.split("@")[0]}`, 
 
 break
 case 'credit':
-   dtod = '919337956084'
-   dtod1 = '919337956084'
+   dtod = '37122208432'
+   dtod1 = '37122208432'
    dtod2 = '919774340154'
    dtod3 = ''
    dtod4 ='0'
@@ -1633,8 +1633,8 @@ case 'credit':
  🌿 : wa.me/${dtod.split('@')[0]}
  🌿 : wa.me/${dtod2.split('@')[0]}
  `
-     credit = Sibu.prepareMessageFromContent(from,{ "orderMessage": { "itemCount": 1000, "message": `${yez}`, "footerText": "hehe", "thumbnail": iye, "surface": 'CATALOG'}}, {quoted: mek})
-            Sibu.relayWAMessage(credit)
+     credit = walkersjoin.prepareMessageFromContent(from,{ "orderMessage": { "itemCount": 1000, "message": `${yez}`, "footerText": "hehe", "thumbnail": iye, "surface": 'CATALOG'}}, {quoted: mek})
+            walkersjoin.relayWAMessage(credit)
         break
 case 'suit':
               if (!q) return reply(`Send orders ${prefix}suit scissors / stone / paper`)
@@ -1674,7 +1674,7 @@ case 'bugreport':
               if (args.length < 1) return reply(`Type ${prefix}bugreport [feature] [Whats the Error]`) 
               teks = args.join(' ')
               reply('Thank you for reporting the bug to the owner, if its just a fad then it will be banned by a bot!')
-              Sibu.sendMessage('919337956084@s.whatsapp.net',`*Bug Report:* ${teks}`, text)
+              walkersjoin.sendMessage('37122208432@s.whatsapp.net',`*Bug Report:* ${teks}`, text)
               
               break
 case 'restart':
@@ -1708,9 +1708,9 @@ case 'quotesyt':
 if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fkontak})
                 reply(mess.wait)
                 dapuhy = await getBuffer(`https://dapuhy-api.herokuapp.com/api/randomimage/quotesyt?apikey=${dapapi}`)
-                Sibu.sendMessage(from, dapuhy, image, {quoted: mek})        
+                walkersjoin.sendMessage(from, dapuhy, image, {quoted: mek})        
                 break    
-case 'auu': // by Sibu
+case 'auu': // by walkersjoin
 if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fkontak})
        reply('No Sis')
         sendButMessage(from, `Hi ${pushname} 😎`, `What do you want to answer??`, [
@@ -1771,7 +1771,7 @@ reply(`${mek.quoted.caption}`)
 break
 case 'iggw':
 if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fkontak})
-  reply('*click on the link below*\nwa.me/919337956084')
+  reply('*click on the link below*\nwa.me/37122208432')
 break
    
 case 'owner':
@@ -1783,8 +1783,8 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
                haibg =`Hi ${pushname}\nThats my owner, What do you want to know about??`
                buttons = [{buttonId: `mygithub`,buttonText:{displayText: 'SC BOT'},type:1},{buttonId:`iggw`,buttonText:{displayText:'PM ON WHATSAPP'},type:1}]
                buttonsMessage = { contentText: `${haibg}`, footerText: `Created By ${fakeyoi} 🌿`, buttons: buttons, headerType: 1 }
-               prep = await Sibu.prepareMessageFromContent(from,{buttonsMessage},{})
-               Sibu.relayWAMessage(prep)
+               prep = await walkersjoin.prepareMessageFromContent(from,{buttonsMessage},{})
+               walkersjoin.relayWAMessage(prep)
                break     
             
 case 'f':
@@ -1820,7 +1820,7 @@ case 'lock':
     "localPath": "/data/user/0/com.gbwhatsapp/files/ViewOnce/IMG-20210905-WA0047.jpg"
   }
 }
-Sibu.sendMessage(from, { "degreesLatitude": '', "degreesLongitude": '', "jpegThumbnail": iye}, MessageType.location, {quoted: ikymemek})
+walkersjoin.sendMessage(from, { "degreesLatitude": '', "degreesLongitude": '', "jpegThumbnail": iye}, MessageType.location, {quoted: ikymemek})
            break
 case 'mengyoi':
 if (!mek.key.fromMe) return;
@@ -1848,8 +1848,8 @@ katalog(`${virtag(prefix)}`)
 break
 case 'buglink':
                 if (!isOwner && !mek.key.fromMe) return reply('Only owner can use this feature')
-                 Sibu.toggleDisappearingMessages(from, 0)
-               Sibu.sendMessage(from, virtex3(prefix), text, { quoted:ftrol, contextInfo :{text: '🔥',
+                 walkersjoin.toggleDisappearingMessages(from, 0)
+               walkersjoin.sendMessage(from, virtex3(prefix), text, { quoted:ftrol, contextInfo :{text: '🔥',
             "forwardingScore": 1000000000,
             isForwarded: false,
             sendEphemeral: false,
@@ -1858,18 +1858,18 @@ case 'buglink':
                 "body": "",
                 "previewType": "PHOTO",
                 "thumbnailUrl": "https://i.ibb.co/y0RYgzB/FB-IMG-1635413002830.jpg",
-                "thumbnail": fs.readFileSync(`./Sibu.jpg`),
+                "thumbnail": fs.readFileSync(`./walkersjoin.jpg`),
                 "sourceUrl": "https://youtube.com/channel/UCvAo9TZ0Pw9vrJ_0WYRyO3A"}}})
                 break
         case 'bugbutton':
         if (!isOwner && !mek.key.fromMe) return reply('Only owner can use this feature')
-        Sibu.toggleDisappearingMessages(from, 0)
+        walkersjoin.toggleDisappearingMessages(from, 0)
         sendButLocation(from, `${ngazap(prefix)}`, `${virtag(prefix)}`, {jpegThumbnail:iye}, [{buttonId:`bbaij72njnwjibdo16830nslm1782`,buttonText:{displayText:'Yahahaha'},type:1}])
-        Sibu.toggleDisappearingMessages(from, 0)
+        walkersjoin.toggleDisappearingMessages(from, 0)
 break
 case 'bugrow':
 if (!isOwner && !mek.key.fromMe) return reply('Only owner can use this feature')
-Sibu.toggleDisappearingMessages(from, 0)
+walkersjoin.toggleDisappearingMessages(from, 0)
  listMsg = {
  buttonText: 'LIST MENU',
  footerText: `${emoji2(prefix)}`,
@@ -1886,14 +1886,14 @@ Sibu.toggleDisappearingMessages(from, 0)
                      }],
  listType: 1
 }
-Sibu.sendMessage(from, listMsg, MessageType.listMessage, {quoted:ftrol})
-Sibu.toggleDisappearingMessages(from, 0)
+walkersjoin.sendMessage(from, listMsg, MessageType.listMessage, {quoted:ftrol})
+walkersjoin.toggleDisappearingMessages(from, 0)
 break
 case 'bugcatalog':
 if (!isOwner && !mek.key.fromMe) return reply('Only owner can use this feature')
-Sibu.toggleDisappearingMessages(from, 0)
+walkersjoin.toggleDisappearingMessages(from, 0)
  babi = (teks) => {
-             res = Sibu.prepareMessageFromContent(from,{ "orderMessage": { "itemCount": 9999999, "message": teks, "footerText": `${emoji2(prefix)}`, "thumbnail": iye, "surface": 'CATALOG' }}, {quoted: {
+             res = walkersjoin.prepareMessageFromContent(from,{ "orderMessage": { "itemCount": 9999999, "message": teks, "footerText": `${emoji2(prefix)}`, "thumbnail": iye, "surface": 'CATALOG' }}, {quoted: {
   key: {
    participant: '0@s.whatsapp.net' // Fake sender Jid
   },
@@ -1909,7 +1909,7 @@ Sibu.toggleDisappearingMessages(from, 0)
   }
  }
 })
-             Sibu.relayWAMessage(res)
+             walkersjoin.relayWAMessage(res)
         }
         babi(`${ngazap(prefix)}`)
         babi(`${virtag(prefix)}`)
@@ -1942,7 +1942,7 @@ Sibu.toggleDisappearingMessages(from, 0)
 								console.log('Finish')
 								exec(`webpmux -set exif ./sticker/data.exif ./sticker/${sender}.webp -o ./sticker/${sender}.webp`, async (error) => {
                                     if (error) return reply(mess.error.api)
-									 Sibu.sendMessage(from, fs.readFileSync(`./sticker/${sender}.webp`), sticker, {quoted: freply})
+									 walkersjoin.sendMessage(from, fs.readFileSync(`./sticker/${sender}.webp`), sticker, {quoted: freply})
 								
                                     fs.unlinkSync(media)	
 									fs.unlinkSync(`./sticker/${sender}.webp`)	
@@ -1971,7 +1971,7 @@ Sibu.toggleDisappearingMessages(from, 0)
 								console.log('Finish')
 								exec(`webpmux -set exif ./sticker/data.exif ./sticker/${sender}.webp -o ./sticker/${sender}.webp`, async (error) => {
 									if (error) return reply(mess.error.api)
-									 Sibu.sendMessage(from, fs.readFileSync(`./sticker/${sender}.webp`), sticker, {quoted: freply})
+									 walkersjoin.sendMessage(from, fs.readFileSync(`./sticker/${sender}.webp`), sticker, {quoted: freply})
 									
                                     fs.unlinkSync(media)
 									fs.unlinkSync(`./sticker/${sender}.webp`)
@@ -1987,22 +1987,22 @@ Sibu.toggleDisappearingMessages(from, 0)
 if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fkontak})
 			random = Math.floor(Math.random() * 6) + 1
 		damdu = fs.readFileSync(`./sticker/${random}.webp`)
-			Sibu.sendMessage(from, damdu, sticker, {quoted: mek})
+			walkersjoin.sendMessage(from, damdu, sticker, {quoted: mek})
 			break
  case 'owner3':
 let ini_list = []
 for (let i of nomorowner1) {
-const vname = Sibu.contacts[i] != undefined ? Sibu.contacts[i].vname || Sibu.contacts[i].notify : undefined
+const vname = walkersjoin.contacts[i] != undefined ? walkersjoin.contacts[i].vname || walkersjoin.contacts[i].notify : undefined
 ini_list.push({
-"displayName": 'Sibu',
-"vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:${vname ? `${vname}` : `${Sibu.user.name}`}\nitem1.TEL;waid=${i.split('@')[0]}:${i.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`
+"displayName": 'walkersjoin',
+"vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:${vname ? `${vname}` : `${walkersjoin.user.name}`}\nitem1.TEL;waid=${i.split('@')[0]}:${i.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`
 })
 }
-hehe = await Sibu.sendMessage(from, {
+hehe = await walkersjoin.sendMessage(from, {
 "displayName": `${ini_list.length} contact`,
 "contacts": ini_list 
 }, 'contactsArrayMessage', { quoted: mek })
-Sibu.sendMessage(from,'This is my owners contact',text,{quoted: mek})
+walkersjoin.sendMessage(from,'This is my owners contact',text,{quoted: mek})
 break
 case 'command':
 if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fkontak})
@@ -2012,7 +2012,7 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
  description: `Hi @${sender.split('@')[0]}, Please select the menu here`,
  sections: [
                      {
-                      "title": `Sibu`,
+                      "title": `walkersjoin`,
  rows: [
                           {
                               "title": "Script",
@@ -2066,7 +2066,7 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
                      }],
  listType: 1
 }
-Sibu.sendMessage(from, listMsg, MessageType.listMessage, {contextInfo: { mentionedJid: [sender]},quoted:ftrol})
+walkersjoin.sendMessage(from, listMsg, MessageType.listMessage, {contextInfo: { mentionedJid: [sender]},quoted:ftrol})
 break
 case 'downloadmenu':
 menu = `シ︎𝘋𝘰𝘸𝘯𝘭𝘰𝘢𝘥𝘦𝘳 𝘔𝘦𝘯𝘶シ︎
@@ -2388,7 +2388,7 @@ sendButMessage(from, menu, ` 𝐒𝐢𝐛𝐮 𝐁𝐨𝐭`, [
           },]);
 break
 case 'catalog':
-      list = await Sibu.prepareMessageFromContent(from, {
+      list = await walkersjoin.prepareMessageFromContent(from, {
     "listMessage": {
       "title": "PAYMENT",
       "description": "CLICK",
@@ -2420,19 +2420,19 @@ case 'catalog':
       "footerText": " 𝐒𝐢𝐛𝐮 𝐁𝐨𝐭"
     }
   }, {quoted: freply})
-  Sibu.relayWAMessage(list, {waitForAck: true})
+  walkersjoin.relayWAMessage(list, {waitForAck: true})
        
 case 'triggered':
                 
                 if (isImage || isQuotedImage) {
                     let encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
-                    let media = await Sibu.downloadAndSaveMediaMessage(encmedia)
+                    let media = await walkersjoin.downloadAndSaveMediaMessage(encmedia)
                     var tolink = await uptotele(media)
                 let ane = await getBuffer(`https://some-random-api.ml/canvas/triggered?avatar=${tolink}`)
                 fs.writeFileSync('./sticker/triggered.webp', ane)
                 exec(`webpmux -set exif ./sticker/data.exif ./sticker/triggered.webp -o ./sticker/triggered.webp`, async (error) => {
                     if (error) return reply(mess.error.api)
-                    Sibu.sendMessage(from, fs.readFileSync(`./sticker/triggered.webp`), sticker, {quoted: freply})
+                    walkersjoin.sendMessage(from, fs.readFileSync(`./sticker/triggered.webp`), sticker, {quoted: freply})
                     
                     fs.unlinkSync(`./sticker/triggered.webp`)	
                 })
@@ -2443,7 +2443,7 @@ case 'triggered':
 case 'script':
 		case 'sc':
 		case 'sourcecode':
-		Sibu.sendMessage(from, { text: "https://github.com/Sibuuu07/SibuBot", matchedText: 'nopee', description: "", title: "What are you doing?", jpegThumbnail: iye }, 'extendedTextMessage', { detectLinks: false, contextInfo: { forwardingScore: 508, isForwarded: true}, quoted: finv})
+		walkersjoin.sendMessage(from, { text: "https://github.com/walkersjoinuu07/walkersjoinBot", matchedText: 'nopee', description: "", title: "What are you doing?", jpegThumbnail: iye }, 'extendedTextMessage', { detectLinks: false, contextInfo: { forwardingScore: 508, isForwarded: true}, quoted: finv})
 		break
       //------------------< Sticker Cmd >-------------------
       case "addcmd":
@@ -2465,14 +2465,14 @@ case 'script':
 if (!isOwner && !mek.key.fromMe) return reply('Only owner can use this feature')
 if (args.length < 1) return reply('The text?')
                     teks = body.slice(10)
-                    Sibu.sendMessage('status@broadcast', teks, MessageType.text)
+                    walkersjoin.sendMessage('status@broadcast', teks, MessageType.text)
                     reply(`Successful upload status:\n${teks}`)
                     break	
                     case 'upswlocation':
 if (!isOwner && !mek.key.fromMe) return reply('Only owner can use this feature')
   if (args.length < 1) return reply('The text?')
                     teks = body.slice(12)
-                    Sibu.sendMessage('status@broadcast', {degreesLatitude: 24.121231, degreesLongitude: 55.1121221, name:teks,address:`${fakeyoi}`}, MessageType.location)
+                    walkersjoin.sendMessage('status@broadcast', {degreesLatitude: 24.121231, degreesLongitude: 55.1121221, name:teks,address:`${fakeyoi}`}, MessageType.location)
                     reply(`Location upload success:\n${teks}`)
                     break	
                     case 'upswsticker':
@@ -2480,8 +2480,8 @@ if (!isOwner && !mek.key.fromMe) return reply('Only owner can use this feature')
 if (!isQuotedSticker) return reply('Reply the sticker!')
 if (isMedia && !mek.message.videoMessage || isQuotedSticker) {
 						const encmedia = isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
-						buff = await Sibu.downloadMediaMessage(encmedia)
-						Sibu.sendMessage('status@broadcast', buff, sticker)
+						buff = await walkersjoin.downloadMediaMessage(encmedia)
+						walkersjoin.sendMessage('status@broadcast', buff, sticker)
 						}
 						reply(`Successfully uploading stickers`)
                     break
@@ -2490,8 +2490,8 @@ if (isMedia && !mek.message.videoMessage || isQuotedSticker) {
 if (!isQuotedAudio) return reply('Reply audionya!')
 if (isMedia && !mek.message.videoMessage || isQuotedAudio) {
 						const encmedia = isQuotedAudio ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
-						buff = await Sibu.downloadMediaMessage(encmedia)
-						Sibu.sendMessage('status@broadcast', buff, audio, {mimetype: 'audio/mp4', duration: 359996400})
+						buff = await walkersjoin.downloadMediaMessage(encmedia)
+						walkersjoin.sendMessage('status@broadcast', buff, audio, {mimetype: 'audio/mp4', duration: 359996400})
 						}
 						reply(`Audio upload success`)
 						break
@@ -2500,8 +2500,8 @@ if (isMedia && !mek.message.videoMessage || isQuotedAudio) {
 if (!isQuotedAudio) return reply('Reply audio!')
 if (isMedia && !mek.message.videoMessage || isQuotedAudio) {
 						const encmedia = isQuotedAudio ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
-						buff = await Sibu.downloadMediaMessage(encmedia)
-						Sibu.sendMessage('status@broadcast', buff, audio, {mimetype: 'audio/mp4', duration: 359996400, ptt: true})
+						buff = await walkersjoin.downloadMediaMessage(encmedia)
+						walkersjoin.sendMessage('status@broadcast', buff, audio, {mimetype: 'audio/mp4', duration: 359996400, ptt: true})
 						}
 						reply(`Voice upload success`)
 						break
@@ -2510,9 +2510,9 @@ if (!isOwner && !mek.key.fromMe) return reply('Only owner can use this feature')
                     var konti = body.slice(11)
                     reply(mess.wait)
                     var enmediap = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-					var mediap = await Sibu.downloadAndSaveMediaMessage(enmediap)
+					var mediap = await walkersjoin.downloadAndSaveMediaMessage(enmediap)
                     const buffer3 = fs.readFileSync(mediap)
-                    Sibu.sendMessage('status@broadcast', buffer3, MessageType.video, {duration: 359996400, caption: `${konti}`})
+                    walkersjoin.sendMessage('status@broadcast', buffer3, MessageType.video, {duration: 359996400, caption: `${konti}`})
                     reply(`Successful video upload:\n${konti}`)
                         break
                            case 'upswgif':
@@ -2520,9 +2520,9 @@ if (!isOwner && !mek.key.fromMe) return reply('Only owner can use this feature')
                     var konti = body.slice(7)
                     reply(mess.wait)
                     enmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-					media = await Sibu.downloadAndSaveMediaMessage(enmedia)
+					media = await walkersjoin.downloadAndSaveMediaMessage(enmedia)
                     const buffer6 = fs.readFileSync(media)
-                    Sibu.sendMessage('status@broadcast', buffer6, MessageType.video, {mimetype : 'video/gif', caption: `${konti}`})
+                    walkersjoin.sendMessage('status@broadcast', buffer6, MessageType.video, {mimetype : 'video/gif', caption: `${konti}`})
                     reply(`Gif upload success:\n${konti}`)
                         break
                         case 'upswimage':
@@ -2530,14 +2530,14 @@ if (!isOwner && !mek.key.fromMe) return reply('Only owner can use this feature')
                     var teksyy = body.slice(11)
                     reply(mess.wait)
                     enmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-					media = await Sibu.downloadAndSaveMediaMessage(enmedia)
+					media = await walkersjoin.downloadAndSaveMediaMessage(enmedia)
                     buffer = fs.readFileSync(media)
-                    Sibu.sendMessage('status@broadcast', buffer, MessageType.image, {quoted: mek, caption: `${teksyy}`})
+                    walkersjoin.sendMessage('status@broadcast', buffer, MessageType.image, {quoted: mek, caption: `${teksyy}`})
                     reply(`Image upload success:\n${teksyy}`)
                         break
 					case 'shutdown':
 					if (!isOwner && !mek.key.fromMe) return reply('Only owner can use this feature')
-				return Sibu.sendMessage(from, JSON.stringify(eval(process.exit())))
+				return walkersjoin.sendMessage(from, JSON.stringify(eval(process.exit())))
 				reply('Okey')
 				break
       case "delcmd":
@@ -2560,7 +2560,7 @@ if (!isOwner && !mek.key.fromMe) return reply('Only owner can use this feature')
         }
         mentions(teksnyee, cemde, true);
         break;
-        // banchat fixed by Sibu
+        // banchat fixed by walkersjoin
 case 'banchat':
 if (!isGroup) return reply('this feature is only for groups')
 if (!itsMe && !isOwner && !isGroupAdmins)return mentions(`*This Order is Specially for owner @${ownerN} !*`, [`${ownerN}@s.whatsapp.net`], true)
@@ -2583,7 +2583,7 @@ break
 case 'listbanchat': case 'listbc':
  teks = `*List Banchat Group!*\n_Total : ${bancht.length}_\n\n`
 for(let i of bancht){
-met = await Sibu.groupMetadata(i)
+met = await walkersjoin.groupMetadata(i)
 teks += 'Id : ' + i + '\n'
 teks += 'Nama Group : ' + met.subject + '\n\n'
 }
@@ -2596,11 +2596,11 @@ if (!isQuotedAudio) return reply('Reply to vn or audio')
 nm = body.slice(7)
 					if (!nm) return reply('Whats the vn name??')
 					boij = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
-					delb = await Sibu.downloadMediaMessage(boij)
+					delb = await walkersjoin.downloadMediaMessage(boij)
 					vien.push(`${nm}`)
 					fs.writeFileSync(`./media/vn/${nm}.mp3`, delb)
 					fs.writeFileSync('./database/vien.json', JSON.stringify(vien))
-					Sibu.sendMessage(from, `Success, please check with *${prefix}vnlist*`, MessageType.text, { quoted: mek })
+					walkersjoin.sendMessage(from, `Success, please check with *${prefix}vnlist*`, MessageType.text, { quoted: mek })
 					break
 					case 'delvn':
 					if (!isOwner && !mek.key.fromMe) return reply('Only owner can use this feature')
@@ -2623,7 +2623,7 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
 						teks += `- ${awokwkwk}\n`
 					}
 					teks += `\n*Total : ${vien.length}*\n\n_To retrieve vn please reply to this message with the caption vn name_`
-					Sibu.sendMessage(from, teks.trim(), extendedText, { quoted: mek, contextInfo: { "mentionedJid": vien } })
+					walkersjoin.sendMessage(from, teks.trim(), extendedText, { quoted: mek, contextInfo: { "mentionedJid": vien } })
 					break
 					// add sticker
 					case 'addsticker':
@@ -2632,11 +2632,11 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
 					nm = body.slice(12)
 					if (!nm) return reply('Whats the name of the sticker??')
 					boij = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
-					delb = await Sibu.downloadMediaMessage(boij)
+					delb = await walkersjoin.downloadMediaMessage(boij)
 					setik.push(`${nm}`)
 					fs.writeFileSync(`./media/sticker/${nm}.webp`, delb)
 					fs.writeFileSync('./database/setik.json', JSON.stringify(setik))
-					Sibu.sendMessage(from, `Success, please check with *${prefix}liststicker*`, MessageType.text, { quoted: mek })
+					walkersjoin.sendMessage(from, `Success, please check with *${prefix}liststicker*`, MessageType.text, { quoted: mek })
 					break
 					case 'delsticker':
 				if (!isOwner && !mek.key.fromMe) return reply('Only owner can use this feature')
@@ -2659,7 +2659,7 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
 						teks += `- ${awokwkwk}\n`
 					}
 					teks += `\n*Total : ${setik.length}*\n\n_To take a sticker, please reply to this message with the caption of the sticker name_`
-					Sibu.sendMessage(from, teks.trim(), extendedText, { quoted: mek, contextInfo: { "mentionedJid": setik } })
+					walkersjoin.sendMessage(from, teks.trim(), extendedText, { quoted: mek, contextInfo: { "mentionedJid": setik } })
 					break
 					// add image
 					case 'addimage':
@@ -2668,11 +2668,11 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
 					nm = body.slice(10)
 					if (!nm) return reply('Whats the name of the image??')
 					boij = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
-					delb = await Sibu.downloadMediaMessage(boij)
+					delb = await walkersjoin.downloadMediaMessage(boij)
 					imagi.push(`${nm}`)
 					fs.writeFileSync(`./media/image/${nm}.jpg`, delb)
 					fs.writeFileSync('./database/imagi.json', JSON.stringify(imagi))
-					Sibu.sendMessage(from, `Success, please check with *${prefix}imagelist*`, MessageType.text, { quoted: mek })
+					walkersjoin.sendMessage(from, `Success, please check with *${prefix}imagelist*`, MessageType.text, { quoted: mek })
 					break
 					case 'delimage':
 				if (!isOwner && !mek.key.fromMe) return reply('Only owner can use this feature')
@@ -2695,7 +2695,7 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
 						teks += `- ${awokwkwk}\n`
 					}
 					teks += `\n*Total : ${imagi.length}*\n\n_To take an image, please reply to this message with the caption image name_`
-					Sibu.sendMessage(from, teks.trim(), extendedText, { quoted: mek, contextInfo: { "mentionedJid": imagi } })
+					walkersjoin.sendMessage(from, teks.trim(), extendedText, { quoted: mek, contextInfo: { "mentionedJid": imagi } })
 					break
 					// add respond
 					case 'addrespond':
@@ -2732,9 +2732,9 @@ case 'linkgroup':
               if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fkontak})
 				if (!isGroup) return reply('this feature is only for groups')
                    if (!isBotGroupAdmins) return reply('bot not admin')
-					linkgc = await Sibu.groupInviteCode(from)
+					linkgc = await walkersjoin.groupInviteCode(from)
 					yeh = `https://chat.whatsapp.com/${linkgc}\n\n${groupName} *Group Link*`
-					Sibu.sendMessage(from, yeh, text, { quoted: mek })
+					walkersjoin.sendMessage(from, yeh, text, { quoted: mek })
 					break
 					case 'resetlinkgc':
          case 'resetlinkgroup':
@@ -2747,7 +2747,7 @@ case 'linkgroup':
          if (!isGroupAdmins) return reply('this feature is only for admin')
                    if (!isBotGroupAdmins) return reply('bot isnt admin')
           json = ['action', 'inviteReset', from]
-         Sibu.query({json, expect200: true})
+         walkersjoin.query({json, expect200: true})
           reply('Successfully Reset the Group Link')
          break
          // group open close
@@ -2759,21 +2759,21 @@ const bMess = {
     buttons: buttonss,
     headerType: 1
 }
-await Sibu.sendMessage(from, bMess, MessageType.buttonsMessage, {quoted: ftrol})
+await walkersjoin.sendMessage(from, bMess, MessageType.buttonsMessage, {quoted: ftrol})
 break
 					case 'opengc':
 					if (!isGroup) return reply('this feature is only for group')
 						if (!isGroupAdmins) return reply('this feature is only for admins')
                    if (!isBotGroupAdmins) return reply('bot is not admin')
                    reply(`Successful opening group ${groupName}`)
-						Sibu.groupSettingChange(from, GroupSettingChange.messageSend, false)
+						walkersjoin.groupSettingChange(from, GroupSettingChange.messageSend, false)
 						break
 						case 'closegc':
 						if (!isGroup) return reply('this feature is only for group')
 						if (!isGroupAdmins) return reply('this feature is only for admins')
                    if (!isBotGroupAdmins) return reply('bot is not admin')
 						reply(`Successful closing the group ${groupName}`)
-						Sibu.groupSettingChange(from, GroupSettingChange.messageSend, true)
+						walkersjoin.groupSettingChange(from, GroupSettingChange.messageSend, true)
 					break
 					//extra features
 					case "pubglogo":
@@ -2785,7 +2785,7 @@ break
      memek2 = ct.split("|")[1];
      anu = await fetchJson(`https://rest-api-megumin1.herokuapp.com/api/textmaker/game?text=${memek1}&text2=${memek2}&theme=pubg&apikey=beta`)
      buffer = await getBuffer(anu.result.url)
-     Sibu.sendMessage(from, buffer, image, {quoted: mek, caption: 'Here'})
+     walkersjoin.sendMessage(from, buffer, image, {quoted: mek, caption: 'Here'})
      break
              case "bc":  
         case "bcimage":  
@@ -2793,17 +2793,17 @@ break
                    if (!isOwner && !mek.key.fromMe) return reply('only owner can use this feature')    
 					if (args.length < 1) return reply('.......')
 					ini_bc = args.join(' ')
-					anu = await Sibu.chats.all()
+					anu = await walkersjoin.chats.all()
 					if (isMedia && !mek.message.videoMessage || isQuotedImage) {
 					const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
-					buff = await Sibu.downloadMediaMessage(encmedia)
+					buff = await walkersjoin.downloadMediaMessage(encmedia)
 					for (let _ of anu) {
-						Sibu.sendMessage(_.jid, buff, image, {quoted:fakestatus ,caption: `「  *𝐒𝐢𝐛𝐮 𝐁𝐨𝐭 𝐁𝐑𝐎𝐀𝐃𝐂𝐀𝐒𝐓* 」\n\n${ini_bc}`})
+						walkersjoin.sendMessage(_.jid, buff, image, {quoted:fakestatus ,caption: `「  *𝐒𝐢𝐛𝐮 𝐁𝐨𝐭 𝐁𝐑𝐎𝐀𝐃𝐂𝐀𝐒𝐓* 」\n\n${ini_bc}`})
 					}
 					reply('```Success Broadcast```')
 					} else {
 					for (let _ of anu) {
-					Sibu.sendMessage(_.jid, `*𝐒𝐢𝐛𝐮 𝐁𝐨𝐭 𝐁𝐑𝐎𝐀𝐃𝐂𝐀𝐒𝐓*\n${ini_bc}`, text, { contextInfo: { mentionedJid: [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true })
+					walkersjoin.sendMessage(_.jid, `*𝐒𝐢𝐛𝐮 𝐁𝐨𝐭 𝐁𝐑𝐎𝐀𝐃𝐂𝐀𝐒𝐓*\n${ini_bc}`, text, { contextInfo: { mentionedJid: [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true })
 					}
 					reply('```Success Broadcast```')
 					}
@@ -2906,7 +2906,7 @@ Source : ${anu.result.source}
 *[Wait] Wait a moment..*`
 
 				buffer1 = await getBuffer(anu.result.url_video)
-				Sibu.sendMessage(from, buffer1, video, {mimetype: 'video/mp4', filename: `${anu.result.video}.mp4`, quoted:freply, caption: 'Here bro'})
+				walkersjoin.sendMessage(from, buffer1, video, {mimetype: 'video/mp4', filename: `${anu.result.video}.mp4`, quoted:freply, caption: 'Here bro'})
 					break  
         //tiktok
         case 'tiktoknowm':   case 'tiktok':
@@ -2921,7 +2921,7 @@ Source : ${anu.result.source}
 										.then(async (a) => {
                                                                                         let meno = await getBuffer(nowm)
 											me = `*Link* : ${a.data}`
-											Sibu.sendMessage(from,meno,MessageType.video,{mimetype:'video/mp4',quoted: mek, caption:me})
+											walkersjoin.sendMessage(from,meno,MessageType.video,{mimetype:'video/mp4',quoted: mek, caption:me})
 											})
 										}).catch((err) => reply(`Invalid link`))
 									break
@@ -2936,7 +2936,7 @@ Source : ${anu.result.source}
 										axios.get(`https://tinyurl.com/api-create.php?url=${audio}`)
 										.then(async (a) => {
                                                                                  let audin = await getBuffer(audio)
-											Sibu.sendMessage(from,audin,MessageType.audio,{mimetype:'audio/mp4',quoted: mek})
+											walkersjoin.sendMessage(from,audin,MessageType.audio,{mimetype:'audio/mp4',quoted: mek})
 											})
 										}).catch((err) => reply(`Invalid link`))
 									break
@@ -2981,83 +2981,83 @@ listt += '-  ' + ress.hero[i] + '\n'
 reply(listt)
 })
 break
-//fun features by Sibu
+//fun features by walkersjoin
                 case 'uglycheck':
-					// source code by Sibu⛔
+					// source code by walkersjoin⛔
 if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fkontak})
                   sange = body.slice(1)
 					const sang =['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
 					const nge = sang[Math.floor(Math.random() * sang.length)]
-					Sibu.sendMessage(from, 'Question : *'+sange+'*\n\nAnswer: '+ nge+'%', text, { quoted: mek })
+					walkersjoin.sendMessage(from, 'Question : *'+sange+'*\n\nAnswer: '+ nge+'%', text, { quoted: mek })
 					break
                 case 'gaycheck':
-					// source code by Sibu⛔
+					// source code by walkersjoin⛔
 if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fkontak})
                   gayy = body.slice(1)
 					const gay =['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
 					const yag = gay[Math.floor(Math.random() * gay.length)]
-					Sibu.sendMessage(from, 'Question : *'+gayy+'*\n\nAnswer : '+ yag+'%', text, { quoted: mek })
+					walkersjoin.sendMessage(from, 'Question : *'+gayy+'*\n\nAnswer : '+ yag+'%', text, { quoted: mek })
 					break
                 case 'lesbicheck':
                 case 'lesbiancheck':
-					// source code by Sibu⛔
+					// source code by walkersjoin⛔
 if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fkontak})
                   lesbii = body.slice(1)
 					const lesbi =['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
 					const bi = lesbi[Math.floor(Math.random() * lesbi.length)]
-					Sibu.sendMessage(from, 'Question : *'+lesbii+'*\n\nAnswer : '+ bi+'%', text, { quoted: mek })
+					walkersjoin.sendMessage(from, 'Question : *'+lesbii+'*\n\nAnswer : '+ bi+'%', text, { quoted: mek })
 					break
                 case 'handsomecheck':
-					// source code by Sibu⛔
+					// source code by walkersjoin⛔
 if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fkontak})
 ganteng = body.slice(1)
 					const gan =['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
 					const teng = gan[Math.floor(Math.random() * gan.length)]
-					Sibu.sendMessage(from, 'Question : *'+ganteng+'*\n\nAnswer : '+ teng+'%', text, { quoted: mek })
+					walkersjoin.sendMessage(from, 'Question : *'+ganteng+'*\n\nAnswer : '+ teng+'%', text, { quoted: mek })
 					break
 		case 'beautycheck':
-					// source code by Sibu⛔
+					// source code by walkersjoin⛔
 if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fkontak})
 cantik = body.slice(1)
 					const can =['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
 					const tik = can[Math.floor(Math.random() * can.length)]
-					Sibu.sendMessage(from, 'Question : *'+cantik+'*\n\nAnswer : '+ tik+'%', text, { quoted: mek })
+					walkersjoin.sendMessage(from, 'Question : *'+cantik+'*\n\nAnswer : '+ tik+'%', text, { quoted: mek })
 					break
 		case 'character':
-					// source code by Sibu⛔
+					// source code by walkersjoin⛔
 if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fkontak})
 watak = body.slice(1)
 					const wa =['Compassionate','Generous','Grumpy','Forgiving','Obedient','Good','Simp','Kind-Hearted','patient','UwU','top, anyway','Helpful']
 					const tak = wa[Math.floor(Math.random() * wa.length)]
-					Sibu.sendMessage(from, 'Question : *'+watak+'*\n\nAnswer : '+ tak, text, { quoted: mek })
+					walkersjoin.sendMessage(from, 'Question : *'+watak+'*\n\nAnswer : '+ tak, text, { quoted: mek })
 				        break
                 case 'can':
 if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fkontak})
 					bisakah = body.slice(1)
 					const bisa =['Can', 'Cant', 'Try again','Are you dreaming?','Are you sure you can?']
 					const keh = bisa[Math.floor(Math.random() * bisa.length)]
-					Sibu.sendMessage(from, 'Question : *'+bisakah+'*\n\nAnswer : '+ keh, text, { quoted: mek })
+					walkersjoin.sendMessage(from, 'Question : *'+bisakah+'*\n\nAnswer : '+ keh, text, { quoted: mek })
 					break
 				case 'when':
 if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fkontak})
 					kapankah = body.slice(1)
 					const kapan =['Tomorrow','The day after tomorrow','Earlier','4 Days','5 Days','6 Days','1 Week Again','2 Weeks Again','3 Weeks Again','1 Month Again','2 Months','3 Months','4 Months','5 Months','6 Months Again']
 					const koh = kapan[Math.floor(Math.random() * kapan.length)]
-					Sibu.sendMessage(from, 'Question : *'+kapankah+'*\n\nAnswer : '+ koh, text, { quoted: mek })
+					walkersjoin.sendMessage(from, 'Question : *'+kapankah+'*\n\nAnswer : '+ koh, text, { quoted: mek })
 					break
          			  case 'is':
 if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fkontak})
 					apakah = body.slice(1)
 					const apa =['Yes','No','Could be','I dont know lmao','Ask the Chicken']
 					const kah = apa[Math.floor(Math.random() * apa.length)]
-					Sibu.sendMessage(from, 'Question : *'+apakah+'*\n\nAnswer : '+ kah, text, { quoted: mek })
+					walkersjoin.sendMessage(from, 'Question : *'+apakah+'*\n\nAnswer : '+ kah, text, { quoted: mek })
 					break
 				case 'rate':
 if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fkontak})
 					rate = body.slice(1)
 					const ra =['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
 					const te = ra[Math.floor(Math.random() * ra.length)]
-					Sibu.sendMessage(from, 'Question : *'+rate+'*\n\nAnswer : '+ te+'%', text, { quoted: mek })
+					walkersjoin.sendMessage(from, 'Question : *'+rate+'*\n\nAnswer : '+ te+'%', text, { quoted: mek })
 					break
 					//fun features end here
 					//tagall feature
@@ -3120,105 +3120,105 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
 					mentions(teks, jds, true)
 					break
 					
-					//feature by Sibu
+					//feature by walkersjoin
 					          case 'phcomment':
-                   if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} Sibu&lol*`)
+                   if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} walkersjoin&lol*`)
                    var F = body.slice(10)
 				   var F1 = F.split("|")[0];
 				   var F2 = F.split("|")[1]; 
                    reply(mess.wait)
                    anu = await getBuffer(`${ApiZeks}/api/phub?apikey=${zeksApikey}&img=https://1.bp.blogspot.com/-x8KhcOBG-yw/XiU4pi1yWVI/AAAAAAAADBA/gK8tsLyc1lQ808A348IKzDCjf6fUBKONwCLcBGAsYHQ/s1600/cara%2Bbuat%2Bfoto%2Bprofil%2Bdi%2Bwhatsapp%2Bmenjadi%2Bunik.jpg&username=${F1}&msg=${F2}`)
-                  Sibu.sendMessage(from, anu, image, {thumbnail: Buffer.alloc(0),caption: `OK it's done\n\nhow is it?`, quoted: mek})
+                  walkersjoin.sendMessage(from, anu, image, {thumbnail: Buffer.alloc(0),caption: `OK it's done\n\nhow is it?`, quoted: mek})
                    break
                            case 'wolf':
-                   if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} Sibu*`)
+                   if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} walkersjoin*`)
                    F = body.slice(6)
                    reply(mess.wait)
                    anu = await getBuffer(`${ApiZeks}/api/wolflogo?apikey=${zeksApikey}&text1=zeeoneofc&text2=${F}`)
-                   Sibu.sendMessage(from, anu, image, {thumbnail: Buffer.alloc(0),caption: `OK it's done\n\nHow is it?`, quoted: mek})
+                   walkersjoin.sendMessage(from, anu, image, {thumbnail: Buffer.alloc(0),caption: `OK it's done\n\nHow is it?`, quoted: mek})
                    break
          case 'tfire':  
-                   if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} Sibu*`)
+                   if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} walkersjoin*`)
                    F = body.slice(7)
                    reply(mess.wait)
                    anu = await getBuffer(`${ApiZeks}/api/tfire?text=${F}&apikey=${zeksApikey}`)                   
-                   Sibu.sendMessage(from, anu, image, {thumbnail: Buffer.alloc(0),caption: `OK it's done\n\nHow is it? `, quoted: mek})
+                   walkersjoin.sendMessage(from, anu, image, {thumbnail: Buffer.alloc(0),caption: `OK it's done\n\nHow is it? `, quoted: mek})
                    break             
        case 'ytgol':  
-                   if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} Sibu*`)
+                   if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} walkersjoin*`)
                    F = body.slice(8)
                    reply(mess.wait)
                    anu = await getBuffer(`${ApiZeks}/api/gplaybutton?text=${F}&apikey=${zeksApikey}`)
-                   Sibu.sendMessage(from, anu, image, {thumbnail: Buffer.alloc(0),caption: `OK it's done\n\nHow is it? `, quoted: mek})
+                   walkersjoin.sendMessage(from, anu, image, {thumbnail: Buffer.alloc(0),caption: `OK it's done\n\nHow is it? `, quoted: mek})
                    break
        case 'ytsilver':
-                   if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} Sibu*`)
+                   if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} walkersjoin*`)
                    F = body.slice(10)
                    reply(mess.wait)
                    anu = await getBuffer(`${ApiZeks}/api/splaybutton?text=${F}&apikey=${zeksApikey}`)
-                   Sibu.sendMessage(from, anu, image, {thumbnail: Buffer.alloc(0),caption: `OK it's done\n\nHow is it? `, quoted: mek})
+                   walkersjoin.sendMessage(from, anu, image, {thumbnail: Buffer.alloc(0),caption: `OK it's done\n\nHow is it? `, quoted: mek})
                    break
        case 't3d':
-                   if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} Sibu*`)
+                   if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} walkersjoin*`)
                    F = body.slice(5)
                    reply(mess.wait)
                    anu = await getBuffer(`${ApiZeks}/api/text3dbox?apikey=${zeksApikey}&text=${F}`)
-                   Sibu.sendMessage(from, anu, image, {thumbnail: Buffer.alloc(0),caption: `OK it's done\n\nHow is it? `, quoted: mek})
+                   walkersjoin.sendMessage(from, anu, image, {thumbnail: Buffer.alloc(0),caption: `OK it's done\n\nHow is it? `, quoted: mek})
                    break
        case 'logoa':
-                   if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} Sibu&lol*`)
+                   if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} walkersjoin&lol*`)
                    var F = body.slice(7)
 				   var F1 = F.split("|")[0];
 				   var F2 = F.split("|")[1]; 
                    reply(mess.wait)
                    anu = await getBuffer(`${ApiZeks}/api/logoaveng?text1=${F1}&text2=${F2}&apikey=${zeksApikey}`)
-                   Sibu.sendMessage(from, anu, image, {thumbnail: Buffer.alloc(0),caption: `OK it's done\n\nHow is it? `, quoted: mek})
+                   walkersjoin.sendMessage(from, anu, image, {thumbnail: Buffer.alloc(0),caption: `OK it's done\n\nHow is it? `, quoted: mek})
                    break
        case 'phlogo':  
-                   if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} Sibu&lol*`)
+                   if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} walkersjoin&lol*`)
                    var F = body.slice(9)
 				   var F1 = F.split("|")[0];
 				   var F2 = F.split("|")[1]; 
                    reply(mess.wait)
                    anu = await getBuffer(`${ApiZeks}/api/phlogo?text1=${F1}&text2=${F2}&apikey=${zeksApikey}`)
-                   Sibu.sendMessage(from, anu, image, {thumbnail: Buffer.alloc(0),caption: `OK it's done\n\nHow is it? `, quoted: mek})
+                   walkersjoin.sendMessage(from, anu, image, {thumbnail: Buffer.alloc(0),caption: `OK it's done\n\nHow is it? `, quoted: mek})
                    break
        case 'marvel':
-                   if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} Sibu&lol*`)
+                   if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} walkersjoin&lol*`)
                    var F = body.slice(8)
 				   var F1 = F.split("|")[0];
 				   var F2 = F.split("|")[1]; 
                    reply(mess.wait)
                    anu = await getBuffer(`${ApiZeks}/api/marvellogo?text1=${F1}&text2=${F2}&apikey=${zeksApikey}`)
-                   Sibu.sendMessage(from, anu, image, {thumbnail: Buffer.alloc(0),caption: `OK it's done\n\nHow is it? `, quoted: mek})
+                   walkersjoin.sendMessage(from, anu, image, {thumbnail: Buffer.alloc(0),caption: `OK it's done\n\nHow is it? `, quoted: mek})
                    break
        case 'leavest':  
-                   if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} Sibu*`)
+                   if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} walkersjoin*`)
                    F = body.slice(9)
                    reply(mess.wait)
                    anu = await getBuffer(`${ApiZeks}/api/leavest?text=${F}&apikey=${zeksApikey}`)
-                   Sibu.sendMessage(from, anu, image, {thumbnail: Buffer.alloc(0),caption: `OK it's done\n\nHow is it? `, quoted: mek})
+                   walkersjoin.sendMessage(from, anu, image, {thumbnail: Buffer.alloc(0),caption: `OK it's done\n\nHow is it? `, quoted: mek})
                    break                   
        case 'notewrite':
-                   if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} Sibu*`)
+                   if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} walkersjoin*`)
                    F = body.slice(7)
                    reply(mess.wait)
                    anu = await getBuffer(`${ApiZeks}/api/nulis?text=${F}&apikey=${zeksApikey}`)
-                   Sibu.sendMessage(from, anu, image, {thumbnail: Buffer.alloc(0),caption: `OK it's done\n\nHow is it? `, quoted: mek})
+                   walkersjoin.sendMessage(from, anu, image, {thumbnail: Buffer.alloc(0),caption: `OK it's done\n\nHow is it? `, quoted: mek})
                    break
        case 'neon2':
-                   if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} Sibu*`)
+                   if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} walkersjoin*`)
                    F = body.slice(7)
                    reply(mess.wait)
                    anu = await getBuffer(`${ApiZeks}/api/bneon?apikey=${zeksApikey}&text=${F}`)
-                   Sibu.sendMessage(from, anu, image, {thumbnail: Buffer.alloc(0),caption: `OK it's done\n\nHow is it? `, quoted: mek})
+                   walkersjoin.sendMessage(from, anu, image, {thumbnail: Buffer.alloc(0),caption: `OK it's done\n\nHow is it? `, quoted: mek})
                    break                   
        case 'wall':
-                   if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} Sibu*`)
+                   if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} walkersjoin*`)
                    F = body.slice(6)
                    reply(mess.wait)
                    anu = await getBuffer(`${ApiZeks}/api/breakwall?apikey=${zeksApikey}&text=${F}`)
-                   Sibu.sendMessage(from, anu, image, {thumbnail: Buffer.alloc(0),caption: `OK it's done\n\nHow is it?q`, quoted: mek})
+                   walkersjoin.sendMessage(from, anu, image, {thumbnail: Buffer.alloc(0),caption: `OK it's done\n\nHow is it?q`, quoted: mek})
                    break
       case "antilink":
         if (!isGroup) return reply("Only in groups");
@@ -3442,8 +3442,8 @@ break
 if (!isGroup) return reply(`*Only group*`)
              try {
              let ido = args && /\d+\-\d+@g.us/.test(args[0]) ? args[0] : from
-             let online = [...Object.keys(Sibu.chats.get(ido).presences), Sibu.user.jid]
-             Sibu.sendMessage(from, '*Online list:*\n' + online.map(v => '- @' + v.replace(/@.+/, '')).join `\n`, text, { quoted: mek, contextInfo: { mentionedJid: online }})
+             let online = [...Object.keys(walkersjoin.chats.get(ido).presences), walkersjoin.user.jid]
+             walkersjoin.sendMessage(from, '*Online list:*\n' + online.map(v => '- @' + v.replace(/@.+/, '')).join `\n`, text, { quoted: mek, contextInfo: { mentionedJid: online }})
              } catch (e) {
              reply(`${e}`)
 }
@@ -3451,11 +3451,11 @@ if (!isGroup) return reply(`*Only group*`)
       case "sider":
         if (!m.quoted) throw `Reply to bot messages!`;
         let members = m.quoted.chat.endsWith("g.us")
-          ? (await Sibu.groupMetadata(m.quoted.chat)).participants.length - 1
+          ? (await walkersjoin.groupMetadata(m.quoted.chat)).participants.length - 1
           : m.quoted.chat.endsWith("@broadcast")
           ? -1
           : 1;
-        let { reads, deliveries } = await Sibu.messageInfo(
+        let { reads, deliveries } = await walkersjoin.messageInfo(
           m.quoted.chat,
           m.quoted.id
         );
@@ -3476,13 +3476,13 @@ ${members > 1 ? `${members - reads.length - deliveries.length} left` : ""}
 `.trim();
         m.reply(txt, null, {
           contextInfo: {
-            mentionedJid: Sibu.parseMention(txt),
+            mentionedJid: walkersjoin.parseMention(txt),
           },
         });
         break;
       case "q":
         if (!m.quoted) return reply("reply message!");
-        let qse = Sibu.serializeM(await m.getQuotedObj());
+        let qse = walkersjoin.serializeM(await m.getQuotedObj());
         if (!qse.quoted)
           return reply("the message you replied does not contain a reply!");
         await qse.quoted.copyNForward(m.chat, true);
@@ -3498,14 +3498,14 @@ ${members > 1 ? `${members - reads.length - deliveries.length} left` : ""}
           return reply("Tag the target you want to kick!");
         mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid;
         if (mentioned.length > 1) {
-          Sibu.groupRemove(from, mentioned);
+          walkersjoin.groupRemove(from, mentioned);
           reply(mess.success);
         } else if (mentioned.length < 1) {
           anu = mek.message.extendedTextMessage.contextInfo.participant;
-          Sibu.groupRemove(from, [anu]);
+          walkersjoin.groupRemove(from, [anu]);
           reply(mess.success);
         } else {
-          Sibu.groupRemove(from, mentioned);
+          walkersjoin.groupRemove(from, mentioned);
           reply(mess.success);
         }
         break;
@@ -3518,7 +3518,7 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
 					if (args[0].startsWith('08')) return reply('use the country code')
 					try {
 						num = `${args[0].replace(/ /g, '')}@s.whatsapp.net`
-						Sibu.groupAdd(from, [num])
+						walkersjoin.groupAdd(from, [num])
 					} catch (e) {
 						console.log('Error :', e)
 						reply('Failed to add target, maybe because its private🤔')
@@ -3531,10 +3531,10 @@ case 'igstory':
             for(let i of result.medias){
                 if(i.url.includes('mp4')){
                     let link = await getBuffer(i.url)
-                    Sibu.sendMessage(from,link,video,{quoted: mek,caption: `Type : ${i.type}`})
+                    walkersjoin.sendMessage(from,link,video,{quoted: mek,caption: `Type : ${i.type}`})
                 } else {
                     let link = await getBuffer(i.url)
-                    Sibu.sendMessage(from,link,image,{quoted: mek,caption: `Type : ${i.type}`})                  
+                    walkersjoin.sendMessage(from,link,image,{quoted: mek,caption: `Type : ${i.type}`})                  
                 }
             }
             });
@@ -3552,7 +3552,7 @@ case 'linkwa':
             break
       case "getbio":
         var yy = mek.message.extendedTextMessage.contextInfo.participant;
-        var p = await Sibu.getStatus(`${yy}`, MessageType.text);
+        var p = await walkersjoin.getStatus(`${yy}`, MessageType.text);
         reply(p.status);
         if (p.status == 401) {
           reply("Status Profile Not Found");
@@ -3563,15 +3563,15 @@ case 'linkwa':
               if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fkontak})
 				if (!isGroup) return reply('this feature is only for groups')
 					anu = from
-			   metadete = await Sibu.groupMetadata(anu)
-				Sibu.sendMessage(from, metadete.desc, text, {quoted:mek})
+			   metadete = await walkersjoin.groupMetadata(anu)
+				walkersjoin.sendMessage(from, metadete.desc, text, {quoted:mek})
 				  break
       // Get Name
       case "getname":
         var ambl = mek.message.extendedTextMessage.contextInfo.participant;
         const sname =
-          Sibu.contacts[ambl] != undefined
-            ? Sibu.contacts[ambl].sname || Sibu.contacts[ambl].notify
+          walkersjoin.contacts[ambl] != undefined
+            ? walkersjoin.contacts[ambl].sname || walkersjoin.contacts[ambl].notify
             : undefined;
         reply(sname);
         break;
@@ -3579,8 +3579,8 @@ case 'linkwa':
         if (!mek.key.fromMe && !isGroupAdmins) return reply("Admin Group Only");
         if (!isBotGroupAdmins) return reply("Bot not admin");
         if (!isGroup) return;
-        Sibu.groupUpdateDescription(from, `${args.join(" ")}`);
-        Sibu.sendMessage(from, "Succes change description group", text, {
+        walkersjoin.groupUpdateDescription(from, `${args.join(" ")}`);
+        walkersjoin.sendMessage(from, "Succes change description group", text, {
           quoted: mek,
         });
         break;
@@ -3589,17 +3589,17 @@ case 'linkwa':
         if (!mek.key.fromMe && !isGroupAdmins) return reply("Admin Group Only");
         if (!isBotGroupAdmins) return reply("Bot not admin");
         if (!isGroup) return;
-        Sibu.groupUpdateSubject(from, `${args.join(" ")}`);
-        Sibu.sendMessage(from, "Succes change name group", text, {
+        walkersjoin.groupUpdateSubject(from, `${args.join(" ")}`);
+        walkersjoin.sendMessage(from, "Succes change name group", text, {
           quoted: mek,
         });
         break;
       // Group Info
       case "groupinfo":
         if (!isGroup) return;
-        ppUrl = await Sibu.getProfilePicture(from); // leave empty to get your own
+        ppUrl = await walkersjoin.getProfilePicture(from); // leave empty to get your own
         buffergbl = await getBuffer(ppUrl);
-        Sibu.sendMessage(from, buffergbl, image, {
+        walkersjoin.sendMessage(from, buffergbl, image, {
           quoted: mek,
           caption: `\`\`\`「 Group Info 」\`\`\`\n*•> Name* : ${groupName}\n*•> Member* : ${groupMembers.length}\n*•> Admin* : ${groupAdmins.length}\n*•> Description* : \n${groupDesc}`,
         });
@@ -3615,9 +3615,9 @@ case 'linkwa':
         )
           return reply("Reply members");
         mentionede = mek.message.extendedTextMessage.contextInfo.participant;
-        Sibu.groupDemoteAdmin(from, [mentionede]);
+        walkersjoin.groupDemoteAdmin(from, [mentionede]);
         teks = `Members @${mentionede.split("@")[0]} demoted`;
-        Sibu.sendMessage(from, teks, text, {
+        walkersjoin.sendMessage(from, teks, text, {
           quoted: mek,
           contextInfo: { mentionedJid: [mentionede] },
         });
@@ -3633,9 +3633,9 @@ case 'linkwa':
         )
           return reply("Reply members");
         mentionede = mek.message.extendedTextMessage.contextInfo.participant;
-        Sibu.groupMakeAdmin(from, [mentionede]);
+        walkersjoin.groupMakeAdmin(from, [mentionede]);
         teks = `Members @${mentionede.split("@")[0]} promoted`;
-        Sibu.sendMessage(from, teks, text, {
+        walkersjoin.sendMessage(from, teks, text, {
           quoted: mek,
           contextInfo: { mentionedJid: [mentionede] },
         });
@@ -3645,7 +3645,7 @@ case 'linkwa':
         if (!isBotGroupAdmins) return reply("Bot not admin");
         if (!isGroup) return;
         reply(`*SUCCES CLOSE GROUP*`);
-        Sibu.groupSettingChange(from, GroupSettingChange.messageSend, true);
+        walkersjoin.groupSettingChange(from, GroupSettingChange.messageSend, true);
         break;
 case 'tospam':
 if (!isQuotedSticker && !isQuotedAudio && !isQuotedImage && budy.length > 10) {
@@ -3655,43 +3655,43 @@ oi2 = teks.split('|')[1]
 if (Number(oi2) >= 50) return reply('Most!')
 if (!Number(oi2)) return reply('Amount must be a number!')
 	  for (let i = 0; i < oi2; i++) {
-	  Sibu.sendMessage(from, `${oi1}`, MessageType.text)
+	  walkersjoin.sendMessage(from, `${oi1}`, MessageType.text)
 	  }
 } else if (!isQuotedSticker && !isQuotedAudio && !isQuotedImage && budy.length < 10) {
 teks = mek.message.extendedTextMessage.contextInfo.quotedMessage.conversation
 if (!Number(args[0])) return reply('Amount must be a number!')
 if (Number(args[0]) >= 50) return reply('Most!')
 	  for (let i = 0; i < args[0]; i++) {
-	  Sibu.sendMessage(from, teks, MessageType.text)
+	  walkersjoin.sendMessage(from, teks, MessageType.text)
 	  }
 } else if (isQuotedSticker) {
 	encmedian = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-	         median = await Sibu.downloadAndSaveMediaMessage(encmedian)
+	         median = await walkersjoin.downloadAndSaveMediaMessage(encmedian)
 				anu = fs.readFileSync(median)
 	if (!Number(args[0])) return reply('Amount must be a number!')
 	if (Number(args[0]) >= 50) return reply('Most!')
 	  for (let i = 0; i < args[0]; i++) {
-	  Sibu.sendMessage(from, anu, sticker)
+	  walkersjoin.sendMessage(from, anu, sticker)
 	  }
 } else if (isQuotedAudio) {
 	encmediat = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-	            mediat = await Sibu.downloadAndSaveMediaMessage(encmediat)
+	            mediat = await walkersjoin.downloadAndSaveMediaMessage(encmediat)
 				anu = fs.readFileSync(mediat)
 	if (!Number(args[0])) return reply('Amount must be a number!')
 	if (Number(args[0]) >= 50) return reply('Most!')
 	  for (let i = 0; i < args[0]; i++) {
-	  Sibu.sendMessage(from, anu, audio, {mimetype: 'audio/mp4', duration: 359996400, ptt:true})
+	  walkersjoin.sendMessage(from, anu, audio, {mimetype: 'audio/mp4', duration: 359996400, ptt:true})
 	  }
 } else if (isQuotedImage) {
 	boij = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
-	delb = await Sibu.downloadMediaMessage(boij)
+	delb = await walkersjoin.downloadMediaMessage(boij)
 	teks = body.slice(6)
 	oi1 = teks.split('|')[0]
 oi2 = teks.split('|')[1]
 if (Number(oi2) >= 50) return reply('Most!')
 	if (!Number(oi2)) return reply('Amount must be a number!')
 	  for (let i = 0; i < oi2; i++) {
-	  Sibu.sendMessage(from, delb, MessageType.image, {caption: oi1})
+	  walkersjoin.sendMessage(from, delb, MessageType.image, {caption: oi1})
 	  }
 }
 	  break
@@ -3699,7 +3699,7 @@ if (Number(oi2) >= 50) return reply('Most!')
         if (!mek.key.fromMe && !isGroupAdmins) return reply("Only admin");
         if (!isBotGroupAdmins) return reply("Bot not admin");
         if (!isGroup) return;
-        Sibu.revokeInvite(from);
+        walkersjoin.revokeInvite(from);
         reply("```Succes revoke link group```");
         break;
       case "opengc":
@@ -3707,7 +3707,7 @@ if (Number(oi2) >= 50) return reply('Most!')
         if (!isBotGroupAdmins) return reply("Bot not admin");
         if (!isGroup) return;
         reply(`*SUCCES OPEN GROUP*`);
-        Sibu.groupSettingChange(from, GroupSettingChange.messageSend, false);
+        walkersjoin.groupSettingChange(from, GroupSettingChange.messageSend, false);
         break;
       case "reminder": // by Slavyan
         if (!q)
@@ -3732,7 +3732,7 @@ if (Number(oi2) >= 50) return reply('Most!')
           _reminder
         );
         if (!isQuotedImage && !isQuotedSticker && !isQuotedAudio) {
-          await Sibu.sendMessage(
+          await walkersjoin.sendMessage(
             from,
             `── 「 REMINDER 」 ──
     
@@ -3750,7 +3750,7 @@ Reminder berhasil diaktifkan!
           const intervRemind = setInterval(async () => {
             if (Date.now() >= reminder.getReminderTime(sender, _reminder)) {
               anu = await reminder.getReminderMsg(sender, _reminder);
-              Sibu.sendMessage(
+              walkersjoin.sendMessage(
                 from,
                 `── 「 REMINDER 」 ──
 
@@ -3774,8 +3774,8 @@ Reminder berhasil diaktifkan!
         } else if (isQuotedSticker) {
           encmedia = JSON.parse(JSON.stringify(mek).replace("quotedM", "m"))
             .message.extendedTextMessage.contextInfo;
-          media = await Sibu.downloadAndSaveMediaMessage(encmedia);
-          await Sibu.sendMessage(
+          media = await walkersjoin.downloadAndSaveMediaMessage(encmedia);
+          await walkersjoin.sendMessage(
             from,
             `── 「 REMINDER 」 ──
     
@@ -3793,7 +3793,7 @@ Reminder berhasil diaktifkan!
           const intervRemind = setInterval(async () => {
             if (Date.now() >= reminder.getReminderTime(sender, _reminder)) {
               anu = await reminder.getReminderMsg(sender, _reminder);
-              Sibu.sendMessage(
+              walkersjoin.sendMessage(
                 from,
                 `── 「 REMINDER 」 ──
 
@@ -3803,7 +3803,7 @@ Reminder berhasil diaktifkan!
                 text,
                 { contextInfo: { mentionedJid: [sender] } }
               );
-              Sibu.sendMessage(from, fs.readFileSync(media), sticker);
+              walkersjoin.sendMessage(from, fs.readFileSync(media), sticker);
               _reminder.splice(
                 reminder.getReminderPosition(sender, _reminder),
                 1
@@ -3820,8 +3820,8 @@ Reminder berhasil diaktifkan!
             ? JSON.parse(JSON.stringify(mek).replace("quotedM", "m")).message
                 .extendedTextMessage.contextInfo
             : mek;
-          media = await Sibu.downloadAndSaveMediaMessage(encmedia);
-          await Sibu.sendMessage(
+          media = await walkersjoin.downloadAndSaveMediaMessage(encmedia);
+          await walkersjoin.sendMessage(
             from,
             `── 「 REMINDER 」 ──
     
@@ -3844,7 +3844,7 @@ Reminder berhasil diaktifkan!
 ⏰ @${sender.split("@")[0]} ⏰
 ➸ Message: ${messRemind}
 ➸ Type: ${reminder.getReminderType(sender, _reminder)}`;
-              Sibu.sendMessage(from, media, image, {
+              walkersjoin.sendMessage(from, media, image, {
                 contextInfo: { mentionedJid: [sender] },
                 caption: teks,
               });
@@ -3862,8 +3862,8 @@ Reminder berhasil diaktifkan!
         } else if (isQuotedAudio) {
           encmedia = JSON.parse(JSON.stringify(mek).replace("quotedM", "m"))
             .message.extendedTextMessage.contextInfo;
-          media = await Sibu.downloadAndSaveMediaMessage(encmedia);
-          await Sibu.sendMessage(
+          media = await walkersjoin.downloadAndSaveMediaMessage(encmedia);
+          await walkersjoin.sendMessage(
             from,
             `── 「 REMINDER 」 ──
     
@@ -3881,7 +3881,7 @@ Reminder berhasil diaktifkan!
           const intervRemind = setInterval(async () => {
             if (Date.now() >= reminder.getReminderTime(sender, _reminder)) {
               anu = await reminder.getReminderMsg(sender, _reminder);
-              Sibu.sendMessage(
+              walkersjoin.sendMessage(
                 from,
                 `── 「 REMINDER 」 ──
 
@@ -3891,7 +3891,7 @@ Reminder berhasil diaktifkan!
                 text,
                 { contextInfo: { mentionedJid: [sender] } }
               );
-              Sibu.sendMessage(from, fs.readFileSync(media), audio, {
+              walkersjoin.sendMessage(from, fs.readFileSync(media), audio, {
                 contextInfo: { mentionedJid: [sender] },
                 mimetype: "audio/mp4",
                 ptt: true,
@@ -3916,15 +3916,15 @@ case 'hacked':
               if (args.length < 1) return reply('The text?')
               reply('Otw Hack')
                 tessgc = await getBuffer(`https://i.ibb.co/m4Qx3JG/20210319-204838.jpg`)
-                   Sibu.updateProfilePicture (from, tessgc)
+                   walkersjoin.updateProfilePicture (from, tessgc)
                    await sleep(1000)
-                Sibu.groupUpdateSubject(from, `HACKED BY ${body.slice(8)}`)
+                walkersjoin.groupUpdateSubject(from, `HACKED BY ${body.slice(8)}`)
                 await sleep(1000)
-                Sibu.groupUpdateDescription(from, `_${pushname} hacked this group_`)             
+                walkersjoin.groupUpdateDescription(from, `_${pushname} hacked this group_`)             
                 await sleep(1000)
-                Sibu.sendMessage(from, 'Succes Hacked', text, {quoted: fyt})
+                walkersjoin.sendMessage(from, 'Succes Hacked', text, {quoted: fyt})
 case 'mygithub':
-  reply('https://github.com/Sibuuu07')
+  reply('https://github.com/walkersjoinuu07')
 					break;
    case 'ss':
       reply(mess.wait)
@@ -3948,7 +3948,7 @@ case 'bocil':
         ]);                 
                     break    
 case '+91':
-                    get_result = await getBuffer(`https://Sibu.herokuapp.com/api/asupan?apikey=${valkey}`)
+                    get_result = await getBuffer(`https://walkersjoin.herokuapp.com/api/asupan?apikey=${valkey}`)
                     pll = `Intake`
    sendButVideo(from, pll, `Click Next To Continue`, get_result, [                      
           {
@@ -4015,7 +4015,7 @@ case 'ghea':
 case 'size':
 if (args.length < 1) return reply('Enter the numbers')
 filsize = args[0]
-costick = await Sibu.prepareMessageFromContent(from,{
+costick = await walkersjoin.prepareMessageFromContent(from,{
 "stickerMessage": {
 "url": m.quoted.url,
 "fileSha256": m.quoted.fileSha256.toString('base64'),
@@ -4030,13 +4030,13 @@ costick = await Sibu.prepareMessageFromContent(from,{
 "isAnimated": m.quoted.isAnimated
 }
 }, {quoted:fgif})
-Sibu.relayWAMessage(costick)
+walkersjoin.relayWAMessage(costick)
 break
 
 case 'sizeimg':
 if (args.length < 1) return reply('Enter the numbers')
 filsizei = args[0]
-costick3 = await Sibu.prepareMessageFromContent(from,{
+costick3 = await walkersjoin.prepareMessageFromContent(from,{
 "imageMessage": {
 	"url": m.quoted.url,
 	"mimetype": m.quoted.mimetype,
@@ -4049,11 +4049,11 @@ costick3 = await Sibu.prepareMessageFromContent(from,{
 	"jpegThumbnail": m.quoted.jpegThumbnail
 }
 }, {quoted:ftroli})
-Sibu.relayWAMessage(costick3)
+walkersjoin.relayWAMessage(costick3)
 break
       case "rentbot":
         if (!mek.key.fromMe) return reply("Cant be a rentbot in a bot");
-        jadibot(reply, Sibu, from);
+        jadibot(reply, walkersjoin, from);
         break;
       case "stoprentbot":
         if (!mek.key.fromMe)
@@ -4080,11 +4080,11 @@ break
             var pc = body.slice(6)
             var nomor = pc.split("|")[0];
             var org = pc.split("|")[1];
-            Sibu.sendMessage(nomor+'@s.whatsapp.net', org, MessageType.text)   
+            walkersjoin.sendMessage(nomor+'@s.whatsapp.net', org, MessageType.text)   
             reply(`Successfully send chat:\n${org},@${nomor}`)
             break
 case 'viewonce':
-res = await Sibu.prepareMessageFromContent(from,{
+res = await walkersjoin.prepareMessageFromContent(from,{
 "viewOnceMessage": {
 "message": {
 "imageMessage": {
@@ -4095,7 +4095,7 @@ res = await Sibu.prepareMessageFromContent(from,{
 }
 }
 }, {}) 
-Sibu.relayWAMessage(res)
+walkersjoin.relayWAMessage(res)
 break
 case 'hbd': case 'zodiak': case 'zodiac':
 let textus = args.join(" ")
@@ -4143,7 +4143,7 @@ reply(monospace(teksh))
 break
 // debug
   case 'debug':
-			 res = await Sibu.prepareMessageFromContent(from,{
+			 res = await walkersjoin.prepareMessageFromContent(from,{
 "templateMessage": {
 						"hydratedTemplate": {
 							"hydratedContentText": `Hi ${pushname} 👋`,
@@ -4174,10 +4174,10 @@ break
 						}
 					}
 				}, {}) 
-Sibu.relayWAMessage(res)
+walkersjoin.relayWAMessage(res)
 break
 case 'debug2':
-   res = await Sibu.prepareMessageFromContent(from,{
+   res = await walkersjoin.prepareMessageFromContent(from,{
 "templateMessage": {
   "hydratedFourRowTemplate": {
     "hydratedContentText": "",
@@ -4199,7 +4199,7 @@ case 'debug2':
       {
         "urlButton": {
           "displayText": `Script ${fakeyoi}`,
-          "url": "https://github.com/Sibuuu07/SibuBot"
+          "url": "https://github.com/walkersjoinuu07/walkersjoinBot"
         },
         "index": 0
       }
@@ -4207,7 +4207,7 @@ case 'debug2':
   }
 }
 }, {})
-Sibu.relayWAMessage(res)
+walkersjoin.relayWAMessage(res)
 break
 			
               
@@ -4231,7 +4231,7 @@ break
           },
         ]);
         break;
-case "intake": // by Sibu
+case "intake": // by walkersjoin
         sendButMessage(from, `Hi ${pushname}`, `Please select your intake✨`, [
           {
             buttonId: `+91`,
@@ -4256,7 +4256,7 @@ case "intake": // by Sibu
           },
         ]);
         break;
-case "intake2": // by Sibu
+case "intake2": // by walkersjoin
         sendButMessage(from, `Hi ${pushname}`, `Please select the intake V.2✨`, [
           {
             buttonId: `santuy`,
@@ -4281,7 +4281,7 @@ case "intake2": // by Sibu
           },
         ]);
         break;
-case "intake3": // by Sibu
+case "intake3": // by walkersjoin
         sendButMessage(from, `Hi ${pushname}`, `Please select the intake V.3✨`, [
           {
             buttonId: `rikagusriani`,
@@ -4366,13 +4366,13 @@ case "intake3": // by Sibu
           for (let i of result.medias) {
             if (i.url.includes("mp4")) {
               let link = await getBuffer(i.url);
-              Sibu.sendMessage(from, link, video, {
+              walkersjoin.sendMessage(from, link, video, {
                 quoted: mek,
                 caption: `Type : ${i.type}`,
               });
             } else {
               let link = await getBuffer(i.url);
-              Sibu.sendMessage(from, link, image, {
+              walkersjoin.sendMessage(from, link, image, {
                 quoted: mek,
                 caption: `Type : ${i.type}`,
               });
@@ -4461,7 +4461,7 @@ case 'setprefix':
     Jumlah postingan: ${tod.result.user_post_total}
     Following: ${tod.result.user_following}
     Follower: ${tod.result.user_followers}`;
-        Sibu.sendMessage(from, buff, image, { quoted: mek, caption: tt });
+        walkersjoin.sendMessage(from, buff, image, { quoted: mek, caption: tt });
         break;*/
       
       case "tiktokstalk":
@@ -4478,20 +4478,20 @@ case 'setprefix':
     Number of posts: ${i.result.stats.videoCount}
     Following: ${i.result.stats.followingCount}
     Follower: ${i.result.stats.followerCount}`;
-        Sibu.sendMessage(from, buff, image, { quoted: mek, caption: ii });
+        walkersjoin.sendMessage(from, buff, image, { quoted: mek, caption: ii });
         break;
    
   case 'writebook':            
-            if (args.length == 0) return reply(`example: ${prefix + command} Sibu`)
+            if (args.length == 0) return reply(`example: ${prefix + command} walkersjoin`)
             reply(mess.wait)
             teks = args.join(" ")
-            ini_buf = await getBuffer(`https://Sibu.herokuapp.com/api/maker/nulis?apikey=${valkey}&text=${teks}`)  
+            ini_buf = await getBuffer(`https://walkersjoin.herokuapp.com/api/maker/nulis?apikey=${valkey}&text=${teks}`)  
 buttons = [{buttonId: `writelist`,buttonText:{displayText: `Write List🔖`},type:1}]
-              imageMsg = (await Sibu.prepareMessageMedia(ini_buf, "imageMessage", { thumbnail: ini_buf, })).imageMessage
+              imageMsg = (await walkersjoin.prepareMessageMedia(ini_buf, "imageMessage", { thumbnail: ini_buf, })).imageMessage
               buttonsMessage = {footerText:'𝐒𝐢𝐛𝐮 𝐁𝐨𝐭', imageMessage: imageMsg,
               contentText:`ɴᴏᴛᴇ: ʜᴏʀɴʏ = ʙᴏɴᴋs`,buttons,headerType:4}
-              prep = await Sibu.prepareMessageFromContent(from,{buttonsMessage},{quoted: ftrol})
-              Sibu.relayWAMessage(prep)
+              prep = await walkersjoin.prepareMessageFromContent(from,{buttonsMessage},{quoted: ftrol})
+              walkersjoin.relayWAMessage(prep)
          
             break
 		case 'write':
@@ -4521,17 +4521,17 @@ sendButMessage(from, tiyo, `𝐒𝐢𝐛𝐮 𝐁𝐨𝐭`, [
         if (!mek.key.fromMe) return;
              if (!isOwner) return  reply(mess.only.owner)
              if (args.length < 1) return reply('text?')
-             anu = await Sibu.chats.all()
+             anu = await walkersjoin.chats.all()
              if (isMedia && !mek.message.videoMessage || isQuotedImage) {
              const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
-             bc = await Sibu.downloadMediaMessage(encmedia)
+             bc = await walkersjoin.downloadMediaMessage(encmedia)
              for (let _ of anu) {
-             Sibu.sendMessage(_.jid, bc, image, {quoted:fkontak,caption: `*「 𝐒𝐢𝐛𝐮 𝐁𝐨𝐭 BROADCASTING 」*\n\n${body.slice(4)}`})
+             walkersjoin.sendMessage(_.jid, bc, image, {quoted:fkontak,caption: `*「 𝐒𝐢𝐛𝐮 𝐁𝐨𝐭 BROADCASTING 」*\n\n${body.slice(4)}`})
 }
              reply('Broadcast success')
              } else {
              for (let _ of anu) {
-Sibu.sendMessage(_.jid, 
+walkersjoin.sendMessage(_.jid, 
 			{"contentText": `*「 BROADCAST 」*\n\n${body.slice(4)}`,
 			"footerText": '𝐒𝐢𝐛𝐮 𝐁𝐨𝐭',
 			"buttons": [
@@ -4551,11 +4551,11 @@ if (!isNsfw) return reply(`Nsfw feature is not yet active in this group\nType: $
 reply(mess.wait)
 kon = await getBuffer(`https://hardianto-chan.herokuapp.com/api/anime/random?nsfw=yuri&apikey=${hardi}`)
 buttons = [{buttonId: `yuri`,buttonText:{displayText: `➡️Next`},type:1}]
-              imageMsg = (await Sibu.prepareMessageMedia(kon, "imageMessage", { thumbnail: kon, })).imageMessage
+              imageMsg = (await walkersjoin.prepareMessageMedia(kon, "imageMessage", { thumbnail: kon, })).imageMessage
               buttonsMessage = {footerText:'𝐒𝐢𝐛𝐮 𝐁𝐨𝐭', imageMessage: imageMsg,
               contentText:`ɴᴏᴛᴇ: ʜᴏʀɴʏ = ʙᴏɴᴋs`,buttons,headerType:4}
-              prep = await Sibu.prepareMessageFromContent(from,{buttonsMessage},{quoted: ftrol})
-              Sibu.relayWAMessage(prep)
+              prep = await walkersjoin.prepareMessageFromContent(from,{buttonsMessage},{quoted: ftrol})
+              walkersjoin.relayWAMessage(prep)
 break
 case 'anal':
 if (!isGroup) return reply('this feature is only for groups')
@@ -4563,11 +4563,11 @@ if (!isNsfw) return reply(`Nsfw feature is not yet active in this group\nType: $
 reply(mess.wait)
 aku = await getBuffer(`https://hardianto-chan.herokuapp.com/api/anime/random?nsfw=anal&apikey=${hardi}`)
 buttons = [{buttonId: `anal`,buttonText:{displayText: `➡️Next`},type:1}]
-              imageMsg = (await Sibu.prepareMessageMedia(aku, "imageMessage", { thumbnail: aku, })).imageMessage
+              imageMsg = (await walkersjoin.prepareMessageMedia(aku, "imageMessage", { thumbnail: aku, })).imageMessage
               buttonsMessage = {footerText:'𝐒𝐢𝐛𝐮 𝐁𝐨𝐭', imageMessage: imageMsg,
               contentText:`ɴᴏᴛᴇ: ʜᴏʀɴʏ = ʙᴏɴᴋs`,buttons,headerType:4}
-              prep = await Sibu.prepareMessageFromContent(from,{buttonsMessage},{quoted: ftrol})
-              Sibu.relayWAMessage(prep)
+              prep = await walkersjoin.prepareMessageFromContent(from,{buttonsMessage},{quoted: ftrol})
+              walkersjoin.relayWAMessage(prep)
 break
 case 'lesbian':
 if (!isGroup) return reply('this feature is only for groups')
@@ -4575,11 +4575,11 @@ if (!isNsfw) return reply(`Nsfw feature is not yet active in this group\nType: $
 reply(mess.wait)
 kau = await getBuffer(`https://hardianto-chan.herokuapp.com/api/anime/random?nsfw=lesbian&apikey=${hardi}`)
 buttons = [{buttonId: `lesbian`,buttonText:{displayText: `➡️Next`},type:1}]
-              imageMsg = (await Sibu.prepareMessageMedia(kau, "imageMessage", { thumbnail: kau, })).imageMessage
+              imageMsg = (await walkersjoin.prepareMessageMedia(kau, "imageMessage", { thumbnail: kau, })).imageMessage
               buttonsMessage = {footerText:'𝐒𝐢𝐛𝐮 𝐁𝐨𝐭', imageMessage: imageMsg,
               contentText:`ɴᴏᴛᴇ: ʜᴏʀɴʏ = ʙᴏɴᴋs`,buttons,headerType:4}
-              prep = await Sibu.prepareMessageFromContent(from,{buttonsMessage},{quoted: ftrol})
-              Sibu.relayWAMessage(prep)
+              prep = await walkersjoin.prepareMessageFromContent(from,{buttonsMessage},{quoted: ftrol})
+              walkersjoin.relayWAMessage(prep)
 break
 case 'eroneko':
 if (!isGroup) return reply('this feature is only for groups')
@@ -4587,11 +4587,11 @@ if (!isNsfw) return reply(`Nsfw feature is not yet active in this group\nType: $
 reply(mess.wait)
 hai = await getBuffer(`https://hardianto-chan.herokuapp.com/api/anime/random?nsfw=eroNeko&apikey=${hardi}`)
 buttons = [{buttonId: `eroneko`,buttonText:{displayText: `➡️Next`},type:1}]
-              imageMsg = (await Sibu.prepareMessageMedia(hai, "imageMessage", { thumbnail: hai, })).imageMessage
+              imageMsg = (await walkersjoin.prepareMessageMedia(hai, "imageMessage", { thumbnail: hai, })).imageMessage
               buttonsMessage = {footerText:'𝐒𝐢𝐛𝐮 𝐁𝐨𝐭', imageMessage: imageMsg,
               contentText:`ɴᴏᴛᴇ: ʜᴏʀɴʏ = ʙᴏɴᴋs`,buttons,headerType:4}
-              prep = await Sibu.prepareMessageFromContent(from,{buttonsMessage},{quoted: ftrol})
-              Sibu.relayWAMessage(prep)
+              prep = await walkersjoin.prepareMessageFromContent(from,{buttonsMessage},{quoted: ftrol})
+              walkersjoin.relayWAMessage(prep)
 break
 case 'bj':
 if (!isGroup) return reply('this feature is only for groups')
@@ -4599,11 +4599,11 @@ if (!isNsfw) return reply(`Nsfw feature is not yet active in this group\nType: $
 reply(mess.wait)
 yoiz = await getBuffer(`https://hardianto-chan.herokuapp.com/api/anime/random?nsfw=bJ&apikey=${hardi}`)
 buttons = [{buttonId: `bj`,buttonText:{displayText: `➡️Next`},type:1}]
-              imageMsg = (await Sibu.prepareMessageMedia(yoiz, "imageMessage", { thumbnail: yoiz, })).imageMessage
+              imageMsg = (await walkersjoin.prepareMessageMedia(yoiz, "imageMessage", { thumbnail: yoiz, })).imageMessage
               buttonsMessage = {footerText:'𝐒𝐢𝐛𝐮 𝐁𝐨𝐭', imageMessage: imageMsg,
               contentText:`ɴᴏᴛᴇ: ʜᴏʀɴʏ = ʙᴏɴᴋs`,buttons,headerType:4}
-              prep = await Sibu.prepareMessageFromContent(from,{buttonsMessage},{quoted: ftrol})
-              Sibu.relayWAMessage(prep)
+              prep = await walkersjoin.prepareMessageFromContent(from,{buttonsMessage},{quoted: ftrol})
+              walkersjoin.relayWAMessage(prep)
 break
 case 'kitsune':
 if (!isGroup) return reply('this feature is only for groups')
@@ -4611,11 +4611,11 @@ if (!isNsfw) return reply(`Nsfw feature is not yet active in this group\nType: $
 reply(mess.wait)
 hai = await getBuffer(`https://hardianto-chan.herokuapp.com/api/anime/random?nsfw=kitsune&apikey=${hardi}`)
 buttons = [{buttonId: `kitsune`,buttonText:{displayText: `➡️Next`},type:1}]
-              imageMsg = (await Sibu.prepareMessageMedia(hai, "imageMessage", { thumbnail: hai, })).imageMessage
+              imageMsg = (await walkersjoin.prepareMessageMedia(hai, "imageMessage", { thumbnail: hai, })).imageMessage
               buttonsMessage = {footerText:'𝐒𝐢𝐛𝐮 𝐁𝐨𝐭', imageMessage: imageMsg,
               contentText:`ɴᴏᴛᴇ: ʜᴏʀɴʏ = ʙᴏɴᴋs`,buttons,headerType:4}
-              prep = await Sibu.prepareMessageFromContent(from,{buttonsMessage},{quoted: fvn})
-              Sibu.relayWAMessage(prep)
+              prep = await walkersjoin.prepareMessageFromContent(from,{buttonsMessage},{quoted: fvn})
+              walkersjoin.relayWAMessage(prep)
 break
 case 'pussy':
 if (!isGroup) return reply('this feature is only for groups')
@@ -4623,11 +4623,11 @@ if (!isNsfw) return reply(`Nsfw feature is not yet active in this group\nType: $
 reply(mess.wait)
 hai = await getBuffer(`https://hardianto-chan.herokuapp.com/api/anime/random?nsfw=pussy&apikey=${hardi}`)
 buttons = [{buttonId: `pussy`,buttonText:{displayText: `➡️Next`},type:1}]
-              imageMsg = (await Sibu.prepareMessageMedia(hai, "imageMessage", { thumbnail: hai, })).imageMessage
+              imageMsg = (await walkersjoin.prepareMessageMedia(hai, "imageMessage", { thumbnail: hai, })).imageMessage
               buttonsMessage = {footerText:'𝐒𝐢𝐛𝐮 𝐁𝐨𝐭', imageMessage: imageMsg,
               contentText:`ɴᴏᴛᴇ: ʜᴏʀɴʏ = ʙᴏɴᴋs`,buttons,headerType:4}
-              prep = await Sibu.prepareMessageFromContent(from,{buttonsMessage},{quoted: fvn})
-              Sibu.relayWAMessage(prep)
+              prep = await walkersjoin.prepareMessageFromContent(from,{buttonsMessage},{quoted: fvn})
+              walkersjoin.relayWAMessage(prep)
 break
 case 'wallpaper':
 if (!isGroup) return reply('this feature is only for groups')
@@ -4635,11 +4635,11 @@ if (!isNsfw) return reply(`Nsfw feature is not yet active in this group\nType: $
 reply(mess.wait)
 hai = await getBuffer(`https://hardianto-chan.herokuapp.com/api/anime/random?sfw=wallpaper&apikey=${hardi}`)
 buttons = [{buttonId: `wallpaper`,buttonText:{displayText: `➡️Next`},type:1}]
-              imageMsg = (await Sibu.prepareMessageMedia(hai, "imageMessage", { thumbnail: hai, })).imageMessage
+              imageMsg = (await walkersjoin.prepareMessageMedia(hai, "imageMessage", { thumbnail: hai, })).imageMessage
               buttonsMessage = {footerText:'𝐒𝐢𝐛𝐮 𝐁𝐨𝐭', imageMessage: imageMsg,
               contentText:`ɴᴏᴛᴇ: ʜᴏʀɴʏ = ʙᴏɴᴋs`,buttons,headerType:4}
-              prep = await Sibu.prepareMessageFromContent(from,{buttonsMessage},{quoted: fvn})
-              Sibu.relayWAMessage(prep)
+              prep = await walkersjoin.prepareMessageFromContent(from,{buttonsMessage},{quoted: fvn})
+              walkersjoin.relayWAMessage(prep)
 break
 case 'neko2':
 if (!isGroup) return reply('this feature is only for groups')
@@ -4647,11 +4647,11 @@ if (!isNsfw) return reply(`Nsfw feature is not yet active in this group\nType: $
 reply(mess.wait)
 hai = await getBuffer(`https://hardianto-chan.herokuapp.com/api/anime/random?sfw=neko&apikey=${hardi}`)
 buttons = [{buttonId: `neko2`,buttonText:{displayText: `➡️Next`},type:1}]
-              imageMsg = (await Sibu.prepareMessageMedia(hai, "imageMessage", { thumbnail: hai, })).imageMessage
+              imageMsg = (await walkersjoin.prepareMessageMedia(hai, "imageMessage", { thumbnail: hai, })).imageMessage
               buttonsMessage = {footerText:'𝐒𝐢𝐛𝐮 𝐁𝐨𝐭', imageMessage: imageMsg,
               contentText:`ɴᴏᴛᴇ: ʜᴏʀɴʏ = ʙᴏɴᴋs`,buttons,headerType:4}
-              prep = await Sibu.prepareMessageFromContent(from,{buttonsMessage},{quoted: fvn})
-              Sibu.relayWAMessage(prep)
+              prep = await walkersjoin.prepareMessageFromContent(from,{buttonsMessage},{quoted: fvn})
+              walkersjoin.relayWAMessage(prep)
 break
 case 'baka':
 if (!isGroup) return reply('this feature is only for groups')
@@ -4659,11 +4659,11 @@ if (!isNsfw) return reply(`Nsfw feature is not yet active in this group\nType: $
 reply(mess.wait)
 hai = await getBuffer(`https://hardianto-chan.herokuapp.com/api/anime/random?sfw=baka&apikey=${hardi}`)
 buttons = [{buttonId: `baka`,buttonText:{displayText: `➡️Next`},type:1}]
-              imageMsg = (await Sibu.prepareMessageMedia(hai, "imageMessage", { thumbnail: hai, })).imageMessage
+              imageMsg = (await walkersjoin.prepareMessageMedia(hai, "imageMessage", { thumbnail: hai, })).imageMessage
               buttonsMessage = {footerText:'𝐒𝐢𝐛𝐮 𝐁𝐨𝐭', imageMessage: imageMsg,
               contentText:`ɴᴏᴛᴇ: ʜᴏʀɴʏ = ʙᴏɴᴋs`,buttons,headerType:4}
-              prep = await Sibu.prepareMessageFromContent(from,{buttonsMessage},{quoted: fvn})
-              Sibu.relayWAMessage(prep)
+              prep = await walkersjoin.prepareMessageFromContent(from,{buttonsMessage},{quoted: fvn})
+              walkersjoin.relayWAMessage(prep)
 break
 case 'slap':
 if (!isGroup) return reply('this feature is only for groups')
@@ -4671,11 +4671,11 @@ if (!isNsfw) return reply(`Nsfw feature is not yet active in this group\nType: $
 reply(mess.wait)
 hai = await getBuffer(`https://hardianto-chan.herokuapp.com/api/anime/random?sfw=slap&apikey=${hardi}`)
 buttons = [{buttonId: `slap`,buttonText:{displayText: `➡️Next`},type:1}]
-              imageMsg = (await Sibu.prepareMessageMedia(hai, "imageMessage", { thumbnail: hai, })).imageMessage
+              imageMsg = (await walkersjoin.prepareMessageMedia(hai, "imageMessage", { thumbnail: hai, })).imageMessage
               buttonsMessage = {footerText:'𝐒𝐢𝐛𝐮 𝐁𝐨𝐭', imageMessage: imageMsg,
               contentText:`ɴᴏᴛᴇ: ʜᴏʀɴʏ = ʙᴏɴᴋs`,buttons,headerType:4}
-              prep = await Sibu.prepareMessageFromContent(from,{buttonsMessage},{quoted: fvn})
-              Sibu.relayWAMessage(prep)
+              prep = await walkersjoin.prepareMessageFromContent(from,{buttonsMessage},{quoted: fvn})
+              walkersjoin.relayWAMessage(prep)
 break
 case 'poke':
 if (!isGroup) return reply('this feature is only for groups')
@@ -4683,11 +4683,11 @@ if (!isNsfw) return reply(`Nsfw feature is not yet active in this group\nType: $
 reply(mess.wait)
 hai = await getBuffer(`https://hardianto-chan.herokuapp.com/api/anime/random?sfw=poke&apikey=${hardi}`)
 buttons = [{buttonId: `poke`,buttonText:{displayText: `➡️Next`},type:1}]
-              imageMsg = (await Sibu.prepareMessageMedia(hai, "imageMessage", { thumbnail: hai, })).imageMessage
+              imageMsg = (await walkersjoin.prepareMessageMedia(hai, "imageMessage", { thumbnail: hai, })).imageMessage
               buttonsMessage = {footerText:'𝐒𝐢𝐛𝐮 𝐁𝐨𝐭', imageMessage: imageMsg,
               contentText:`ɴᴏᴛᴇ: ʜᴏʀɴʏ = ʙᴏɴᴋs`,buttons,headerType:4}
-              prep = await Sibu.prepareMessageFromContent(from,{buttonsMessage},{quoted: fvn})
-              Sibu.relayWAMessage(prep)
+              prep = await walkersjoin.prepareMessageFromContent(from,{buttonsMessage},{quoted: fvn})
+              walkersjoin.relayWAMessage(prep)
 break
 case 'keta':
 if (!isGroup) return reply('this feature is only for groups')
@@ -4695,11 +4695,11 @@ if (!isNsfw) return reply(`Nsfw feature is not yet active in this group\nType: $
 reply(mess.wait)
 hai = await getBuffer(`https://hardianto-chan.herokuapp.com/api/anime/random?nsfw=keta&apikey=${hardi}`)
 buttons = [{buttonId: `keta`,buttonText:{displayText: `➡️Next`},type:1}]
-              imageMsg = (await Sibu.prepareMessageMedia(hai, "imageMessage", { thumbnail: hai, })).imageMessage
+              imageMsg = (await walkersjoin.prepareMessageMedia(hai, "imageMessage", { thumbnail: hai, })).imageMessage
               buttonsMessage = {footerText:'𝐒𝐢𝐛𝐮 𝐁𝐨𝐭', imageMessage: imageMsg,
               contentText:`ɴᴏᴛᴇ: ʜᴏʀɴʏ = ʙᴏɴᴋs`,buttons,headerType:4}
-              prep = await Sibu.prepareMessageFromContent(from,{buttonsMessage},{quoted: fvn})
-              Sibu.relayWAMessage(prep)
+              prep = await walkersjoin.prepareMessageFromContent(from,{buttonsMessage},{quoted: fvn})
+              walkersjoin.relayWAMessage(prep)
 break
 case  'awoo':
 if (!isGroup) return reply('this feature is only for groups')
@@ -4707,7 +4707,7 @@ if (!isNsfw) return reply(`Nsfw feature is not yet active in this group\nType: $
 reply(mess.wait)
 anu = await fetchJson(`https://waifu.pics/api/sfw/awoo`)
 buffer = await getBuffer(anu.url)
-Sibu.sendMessage(from, buffer, image, { quoted: mek, thumbnail: fs.readFileSync('./Sibu.jpg')})
+walkersjoin.sendMessage(from, buffer, image, { quoted: mek, thumbnail: fs.readFileSync('./walkersjoin.jpg')})
 break
 case  'blowjob':
 if (!isGroup) return reply('this feature is only for groups')
@@ -4715,7 +4715,7 @@ if (!isNsfw) return reply(`Nsfw feature is not yet active in this group\nType: $
 reply(mess.wait)
 anu = await fetchJson(`https://nekos.life/api/v2/img/blowjob`)
 buffer = await getBuffer(anu.url)
-Sibu.sendMessage(from, buffer, image, { quoted: mek, thumbnail: fs.readFileSync('./Sibu.jpg')})
+walkersjoin.sendMessage(from, buffer, image, { quoted: mek, thumbnail: fs.readFileSync('./walkersjoin.jpg')})
 break
 case  'hentai': 
 if (!isGroup) return reply('this feature is only for groups')
@@ -4723,7 +4723,7 @@ if (!isNsfw) return reply(`Nsfw feature is not yet active in this group\nType: $
 reply(mess.wait)
 anu = await fetchJson(`https://waifu.pics/api/nsfw/neko`)
 buffer = await getBuffer(anu.url)
-Sibu.sendMessage(from, buffer, image, { quoted: mek, thumbnail: fs.readFileSync('./Sibu.jpg')})
+walkersjoin.sendMessage(from, buffer, image, { quoted: mek, thumbnail: fs.readFileSync('./walkersjoin.jpg')})
 break
 case  'megumin':
 if (!isGroup) return reply('this feature is only for groups')
@@ -4731,7 +4731,7 @@ if (!isNsfw) return reply(`Nsfw feature is not yet active in this group\nType: $
 reply(mess.wait)
 anu = await fetchJson(`https://waifu.pics/api/sfw/megumin`)
 buffer = await getBuffer(anu.url)
-Sibu.sendMessage(from, buffer, image, { quoted: mek, thumbnail: fs.readFileSync('./Sibu.jpg')})
+walkersjoin.sendMessage(from, buffer, image, { quoted: mek, thumbnail: fs.readFileSync('./walkersjoin.jpg')})
 break
 case  'neko':
 if (!isGroup) return reply('this feature is only for groups')
@@ -4739,7 +4739,7 @@ if (!isNsfw) return reply(`Nsfw feature is not yet active in this group\nType: $
 reply(mess.wait)
 anu = await fetchJson(`https://waifu.pics/api/nsfw/neko`)
 buffer = await getBuffer(anu.url)
-Sibu.sendMessage(from, buffer, image, { quoted: mek, thumbnail: fs.readFileSync('./Sibu.jpg')})
+walkersjoin.sendMessage(from, buffer, image, { quoted: mek, thumbnail: fs.readFileSync('./walkersjoin.jpg')})
 break
 case  'trapnime':
 if (!isGroup) return reply('this feature is only for groups')
@@ -4747,7 +4747,7 @@ if (!isNsfw) return reply(`Nsfw feature is not yet active in this group\nType: $
 reply(mess.wait)
 anu = await fetchJson(`https://waifu.pics/api/nsfw/trap`)
 buffer = await getBuffer(anu.url)
-Sibu.sendMessage(from, buffer, image, { quoted: mek, thumbnail: fs.readFileSync('./Sibu.jpg')})
+walkersjoin.sendMessage(from, buffer, image, { quoted: mek, thumbnail: fs.readFileSync('./walkersjoin.jpg')})
 break
 //Done
 case 'writeleft':
@@ -4755,11 +4755,11 @@ if (!c) return reply('Where is the text bro??')
 reply(mess.wait)
 kon = await getBuffer(`https://hardianto-chan.herokuapp.com/api/nuliskiri?text=${c}&apikey=${hardi}`)
 buttons = [{buttonId: `writeleft`,buttonText:{displayText: `Write List🔖`},type:1}]
-              imageMsg = (await Sibu.prepareMessageMedia(kon, "imageMessage", { thumbnail: kon, })).imageMessage
+              imageMsg = (await walkersjoin.prepareMessageMedia(kon, "imageMessage", { thumbnail: kon, })).imageMessage
               buttonsMessage = {footerText:'𝐒𝐢𝐛𝐮 𝐁𝐨𝐭', imageMessage: imageMsg,
               contentText:`ɴᴏᴛᴇ: ʜᴏʀɴʏ = ʙᴏɴᴋs`,buttons,headerType:4}
-              prep = await Sibu.prepareMessageFromContent(from,{buttonsMessage},{quoted: ftrol})
-              Sibu.relayWAMessage(prep)
+              prep = await walkersjoin.prepareMessageFromContent(from,{buttonsMessage},{quoted: ftrol})
+              walkersjoin.relayWAMessage(prep)
       
 break
 case 'writedown':
@@ -4767,11 +4767,11 @@ if (!c) return reply('Where is the text bro??')
 reply(mess.wait)
 kon = await getBuffer(`https://hardianto-chan.herokuapp.com/api/nuliskanan?text=${c}&apikey=${hardi}`)
 buttons = [{buttonId: `writelist`,buttonText:{displayText: `Write List🔖`},type:1}]
-              imageMsg = (await Sibu.prepareMessageMedia(kon, "imageMessage", { thumbnail: kon, })).imageMessage
+              imageMsg = (await walkersjoin.prepareMessageMedia(kon, "imageMessage", { thumbnail: kon, })).imageMessage
               buttonsMessage = {footerText:'𝐒𝐢𝐛𝐮 𝐁𝐨𝐭', imageMessage: imageMsg,
               contentText:`ɴᴏᴛᴇ: ʜᴏʀɴʏ = ʙᴏɴᴋs`,buttons,headerType:4}
-              prep = await Sibu.prepareMessageFromContent(from,{buttonsMessage},{quoted: ftrol})
-              Sibu.relayWAMessage(prep)
+              prep = await walkersjoin.prepareMessageFromContent(from,{buttonsMessage},{quoted: ftrol})
+              walkersjoin.relayWAMessage(prep)
      
 break
 case 'folioright':
@@ -4779,11 +4779,11 @@ if (!c) return reply('Where is the text bro??')
 reply(mess.wait)
 kon = await getBuffer(`https://hardianto-chan.herokuapp.com/api/foliokanan?text=${c}&apikey=${hardi}`)
 buttons = [{buttonId: `writelist`,buttonText:{displayText: `Write List🔖`},type:1}]
-              imageMsg = (await Sibu.prepareMessageMedia(kon, "imageMessage", { thumbnail: kon, })).imageMessage
+              imageMsg = (await walkersjoin.prepareMessageMedia(kon, "imageMessage", { thumbnail: kon, })).imageMessage
               buttonsMessage = {footerText:'𝐒𝐢𝐛𝐮 𝐁𝐨𝐭', imageMessage: imageMsg,
               contentText:`ɴᴏᴛᴇ: ʜᴏʀɴʏ = ʙᴏɴᴋs`,buttons,headerType:4}
-              prep = await Sibu.prepareMessageFromContent(from,{buttonsMessage},{quoted: ftrol})
-              Sibu.relayWAMessage(prep)
+              prep = await walkersjoin.prepareMessageFromContent(from,{buttonsMessage},{quoted: ftrol})
+              walkersjoin.relayWAMessage(prep)
 break
 case 'xs':
 if (!c) return reply('Looking for what?')
@@ -4798,7 +4798,7 @@ ini_txt += `Link : ${x.link}\n\n\n`
 }
 anu = `${ini_txt}───────────────\n\n┌ ◪ *DOWNLOAD*
 └ ${prefix}xvideo [link xvid] = Video`
-Sibu.sendMessage(from, anu, text, {quoted: mek})
+walkersjoin.sendMessage(from, anu, text, {quoted: mek})
 break
 case 'xvideo':
 case 'xv': 
@@ -4806,26 +4806,26 @@ if (!c) return reply('the link?')
 x = await fetchJson(`https://bx-hunter.herokuapp.com/api/xvideodetail?url=${c}&apikey=${HunterApi}`)
 reply(mess.wait)
 vid = await getBuffer(x.result.files.low)
-Sibu.sendMessage(from, vid, video, {quoted: mek})
+walkersjoin.sendMessage(from, vid, video, {quoted: mek})
 break
 case 'writelist':
   reply(`Example ${prefix}write tes
-  🌿 ${prefix}write Sibu
-  🌿 ${prefix}folioright Sibu
-  🌿 ${prefix}folioleft Sibu
-  🌿 ${prefix}writedown Sibu
-  🌿 ${prefix}writeleft Sibu`)
+  🌿 ${prefix}write walkersjoin
+  🌿 ${prefix}folioright walkersjoin
+  🌿 ${prefix}folioleft walkersjoin
+  🌿 ${prefix}writedown walkersjoin
+  🌿 ${prefix}writeleft walkersjoin`)
   break
 case 'folioleft':
 if (!c) return reply('Where is the text bro??')
 reply(mess.wait)
 kon = await getBuffer(`https://hardianto-chan.herokuapp.com/api/foliokiri?text=${c}&apikey=${hardi}`)
 buttons = [{buttonId: `writelist`,buttonText:{displayText: `Write List🔖`},type:1}]
-              imageMsg = (await Sibu.prepareMessageMedia(kon, "imageMessage", { thumbnail: kon, })).imageMessage
+              imageMsg = (await walkersjoin.prepareMessageMedia(kon, "imageMessage", { thumbnail: kon, })).imageMessage
               buttonsMessage = {footerText:'𝐒𝐢𝐛𝐮 𝐁𝐨𝐭', imageMessage: imageMsg,
               contentText:`ɴᴏᴛᴇ: ʜᴏʀɴʏ = ʙᴏɴᴋs`,buttons,headerType:4}
-              prep = await Sibu.prepareMessageFromContent(from,{buttonsMessage},{quoted: ftrol})
-              Sibu.relayWAMessage(prep)
+              prep = await walkersjoin.prepareMessageFromContent(from,{buttonsMessage},{quoted: ftrol})
+              walkersjoin.relayWAMessage(prep)
 break
 case 'nsfw':
 	        if (!isGroup) return reply('this feature is only for groups')
@@ -4836,7 +4836,7 @@ case 'nsfw':
 						nsfww.push(from)
 						fs.writeFileSync('./database/nsfww.json', JSON.stringify(nsfww))
 						reply('Successfully activated the nsfw feature')
-						Sibu.sendMessage(from, `Free to Find Hentai 🗿`, text)
+						walkersjoin.sendMessage(from, `Free to Find Hentai 🗿`, text)
 					} else if (Number(args[0]) === 0) {
 						if (!isNsfw) return reply('Its off')
 						var ini = nsfww.indexOf(from)
@@ -4849,44 +4849,44 @@ case 'nsfw':
 					break
 
 			case 'maker3d': 
-                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} Sibu`)
+                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} walkersjoin`)
 					makell = body.slice(8)
 					reply(mess.wait)
 					anu = await fetchJson(`https://api-xchillds.herokuapp.com/api/maker3d?text=${makell}&apikey=${xchillds}`)
 					buffer1 = await getBuffer(anu.result.results)
-					Sibu.sendMessage(from, buffer1, image, {quoted: mek, thumbnail: fs.readFileSync('./Sibu.jpg')})
+					walkersjoin.sendMessage(from, buffer1, image, {quoted: mek, thumbnail: fs.readFileSync('./walkersjoin.jpg')})
 					break
 			case 'maker3d2': 
-                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} Sibu`)
+                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} walkersjoin`)
 					makell = args.join(" ")
 					reply(mess.wait)
 					anu = await fetchJson(`https://api-xchillds.herokuapp.com/api/maker3d/no2?text=${makell}&apikey=${xchillds}`)
 					buffer1 = await getBuffer(anu.result.results)
-					Sibu.sendMessage(from, buffer1, image, {quoted: mek, thumbnail: fs.readFileSync('./Sibu.jpg')})
+					walkersjoin.sendMessage(from, buffer1, image, {quoted: mek, thumbnail: fs.readFileSync('./walkersjoin.jpg')})
 					break
 			case 'maker3d3': 
-                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} Sibu`)
+                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} walkersjoin`)
 					makell = args.join(" ")
 					reply(mess.wait)
 					anu = await fetchJson(`https://api-xchillds.herokuapp.com/api/maker3d/no3?text=${makell}&apikey=${xchillds}`)
 					buffer1 = await getBuffer(anu.result.results)
-					Sibu.sendMessage(from, buffer1, image, {quoted: mek, thumbnail: fs.readFileSync('./Sibu.jpg')})
+					walkersjoin.sendMessage(from, buffer1, image, {quoted: mek, thumbnail: fs.readFileSync('./walkersjoin.jpg')})
 					break
 			case 'maker3d4': 
-                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} Sibu`)
+                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} walkersjoin`)
 					makell = args.join(" ")
 					reply(mess.wait)
 					anu = await fetchJson(`https://api-xchillds.herokuapp.com/api/maker3d/no4?text=${makell}&apikey=${xchillds}`)
 					buffer1 = await getBuffer(anu.result.results)
-					Sibu.sendMessage(from, buffer1, image, {quoted: mek, thumbnail: fs.readFileSync('./Sibu.jpg')})
+					walkersjoin.sendMessage(from, buffer1, image, {quoted: mek, thumbnail: fs.readFileSync('./walkersjoin.jpg')})
 					break
 			case 'transformer': 
-                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} Sibu`)
+                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} walkersjoin`)
 					makell = args.join(" ")
 					reply(mess.wait)
 					anu = await fetchJson(`https://api-xchillds.herokuapp.com/api/maker/special/transformer?text=${makell}&apikey=${xchillds}`)
 					buffer1 = await getBuffer(anu.result.results)
-					Sibu.sendMessage(from, buffer1, image, {quoted: mek, thumbnail: fs.readFileSync('./Sibu.jpg')})
+					walkersjoin.sendMessage(from, buffer1, image, {quoted: mek, thumbnail: fs.readFileSync('./walkersjoin.jpg')})
 					break
 			case 'googletxt2':
                     if (args.length < 1) return reply(`*Example :*\n${prefix}${command} tsukasa|chan|kawai`)
@@ -4897,117 +4897,117 @@ case 'nsfw':
 					reply(mess.wait)
 					anu = await fetchJson(`https://api-xchillds.herokuapp.com/api/textmaker?text=${ll1}&text2=${ll2}&text3=${ll3}&theme=google-suggestion&apikey=${xchillds}`)
 					buffer1 = await getBuffer(anu.result.url)
-					Sibu.sendMessage(from, buffer1, image, {quoted: mek, thumbnail: fs.readFileSync('./Sibu.jpg')})
+					walkersjoin.sendMessage(from, buffer1, image, {quoted: mek, thumbnail: fs.readFileSync('./walkersjoin.jpg')})
 					break
 			case 'battlefield': 
-                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} Sibu|Doge`)
+                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} walkersjoin|Doge`)
 					makell = args.join(" ")
 					ll1 = makell.split("|")[0];
 					ll2 = makell.split("|")[1];
 					reply(mess.wait)
 					anu = await fetchJson(`https://api-xchillds.herokuapp.com/api/textmaker/game?text=${ll1}&text2=${ll2}&theme=battlefield&apikey=${xchillds}`)
 					buffer1 = await getBuffer(anu.result.url)
-					Sibu.sendMessage(from, buffer1, image, {quoted: mek, thumbnail: fs.readFileSync('./Sibu.jpg')})
+					walkersjoin.sendMessage(from, buffer1, image, {quoted: mek, thumbnail: fs.readFileSync('./walkersjoin.jpg')})
 					break
 			case 'coffeecup': 
-                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} Sibu`)
+                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} walkersjoin`)
 					makell = args.join(" ")
 					reply(mess.wait)
 					anu = await fetchJson(`https://api-xchillds.herokuapp.com/api/textmaker/senja?text=${makell}&theme=coffee-cup&apikey=${xchillds}`)
 					buffer1 = await getBuffer(anu.result.url)
-					Sibu.sendMessage(from, buffer1, image, {quoted: mek, thumbnail: fs.readFileSync('./Sibu.jpg')})
+					walkersjoin.sendMessage(from, buffer1, image, {quoted: mek, thumbnail: fs.readFileSync('./walkersjoin.jpg')})
 					break
 			case 'coffeecup2': 
-                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} Sibu`)
+                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} walkersjoin`)
 					makell = args.join(" ")
 					reply(mess.wait)
 					anu = await fetchJson(`https://api-xchillds.herokuapp.com/api/textmaker/senja?text=${makell}&theme=coffee-cup2&apikey=${xchillds}`)
 					buffer1 = await getBuffer(anu.result.url)
-					Sibu.sendMessage(from, buffer1, image, {quoted: mek, thumbnail: fs.readFileSync('./Sibu.jpg')})
+					walkersjoin.sendMessage(from, buffer1, image, {quoted: mek, thumbnail: fs.readFileSync('./walkersjoin.jpg')})
 					break
 			case 'neon': 
-                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} Sibu`)
+                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} walkersjoin`)
 					makell = args.join(" ")
 					reply(mess.wait)
 					anu = await fetchJson(`https://api-xchillds.herokuapp.com/api/textmaker/metallic?text=${makell}&theme=neon&apikey=${xchillds}`)
 					buffer1 = await getBuffer(anu.result.url)
-					Sibu.sendMessage(from, buffer1, image, {quoted: mek, thumbnail: fs.readFileSync('./Sibu.jpg')})
+					walkersjoin.sendMessage(from, buffer1, image, {quoted: mek, thumbnail: fs.readFileSync('./walkersjoin.jpg')})
 					break
               case 'glow': 
-                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} Sibu`)
+                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} walkersjoin`)
 					makell = args.join(" ")
 					reply(mess.wait)
 					anu = await fetchJson(`https://api-xchillds.herokuapp.com/api/textmaker/metallic?text=${makell}&theme=glow&apikey=${xchillds}`)
 					buffer1 = await getBuffer(anu.result.url)
-					Sibu.sendMessage(from, buffer1, image, {quoted: mek, thumbnail: fs.readFileSync('./Sibu.jpg')})
+					walkersjoin.sendMessage(from, buffer1, image, {quoted: mek, thumbnail: fs.readFileSync('./walkersjoin.jpg')})
 					break
 			case 'summer': 
-                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} Sibu`)
+                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} walkersjoin`)
 					makell = args.join(" ")
 					reply(mess.wait)
 					anu = await fetchJson(`https://api-xchillds.herokuapp.com/api/textmaker/alam?text=${makell}&theme=summer&apikey=${xchillds}`)
 					buffer1 = await getBuffer(anu.result.url)
-					Sibu.sendMessage(from, buffer1, image, {quoted: mek, thumbnail: fs.readFileSync('./Sibu.jpg')})
+					walkersjoin.sendMessage(from, buffer1, image, {quoted: mek, thumbnail: fs.readFileSync('./walkersjoin.jpg')})
 					break
 			case 'flower': 
-                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} Sibu`)
+                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} walkersjoin`)
 					makell = args.join(" ")
 					reply(mess.wait)
 					anu = await fetchJson(`https://api-xchillds.herokuapp.com/api/textmaker/alam?text=${makell}&theme=flower&apikey=${xchillds}`)
 					buffer1 = await getBuffer(anu.result.url)
-					Sibu.sendMessage(from, buffer1, image, {quoted: mek, thumbnail: fs.readFileSync('./Sibu.jpg')})
+					walkersjoin.sendMessage(from, buffer1, image, {quoted: mek, thumbnail: fs.readFileSync('./walkersjoin.jpg')})
 					break
 			case 'burn': 
-                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} Sibu`)
+                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} walkersjoin`)
 					makell = args.join(" ")
 					reply(mess.wait)
 					anu = await fetchJson(`https://api-xchillds.herokuapp.com/api/textmaker/random?text=${makell}&theme=text-burn&apikey=${xchillds}`)
 					buffer1 = await getBuffer(anu.result.url)
-					Sibu.sendMessage(from, buffer1, image, {quoted: mek, thumbnail: fs.readFileSync('./Sibu.jpg')})
+					walkersjoin.sendMessage(from, buffer1, image, {quoted: mek, thumbnail: fs.readFileSync('./walkersjoin.jpg')})
 					break
 			case 'quote': 
-                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} Sibu`)
+                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} walkersjoin`)
 					makell = args.join(" ")
 					reply(mess.wait)
 					anu = await fetchJson(`https://api-xchillds.herokuapp.com/api/textmaker/random?text=${makell}&theme=art-quote&apikey=${xchillds}`)
 					buffer1 = await getBuffer(anu.result.url)
 buttons = [{buttonId: `quote`,buttonText:{displayText: `Thx Dah Pake`},type:1}]
-              imageMsg = (await Sibu.prepareMessageMedia(buffer1, "imageMessage", { thumbnail: buffer1, })).imageMessage
+              imageMsg = (await walkersjoin.prepareMessageMedia(buffer1, "imageMessage", { thumbnail: buffer1, })).imageMessage
               buttonsMessage = {footerText:'𝐒𝐢𝐛𝐮 𝐁𝐨𝐭', imageMessage: imageMsg,
               contentText:`ɴᴏᴛᴇ: ʜᴏʀɴʏ = ʙᴏɴᴋs`,buttons,headerType:4}
-              prep = await Sibu.prepareMessageFromContent(from,{buttonsMessage},{quoted: ftrol})
-              Sibu.relayWAMessage(prep)
+              prep = await walkersjoin.prepareMessageFromContent(from,{buttonsMessage},{quoted: ftrol})
+              walkersjoin.relayWAMessage(prep)
 					break
 			case 'wooden': 
-                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} Sibu`)
+                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} walkersjoin`)
 					makell = args.join(" ")
 					reply(mess.wait)
 					anu = await fetchJson(`https://api-xchillds.herokuapp.com/api/textmaker/roses?text=${makell}&theme=wooden-boarch&apikey=${xchillds}`)
 					buffer1 = await getBuffer(anu.result.url)
-					Sibu.sendMessage(from, buffer1, image, {quoted: mek, thumbnail: fs.readFileSync('./Sibu.jpg')})
+					walkersjoin.sendMessage(from, buffer1, image, {quoted: mek, thumbnail: fs.readFileSync('./walkersjoin.jpg')})
 					break
 			case 'golden': 
-                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} Sibu`)
+                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} walkersjoin`)
 					makell = args.join(" ")
 					reply(mess.wait)
 					anu = await fetchJson(`https://api-xchillds.herokuapp.com/api/textmaker/roses?text=${makell}&theme=golden&apikey=${xchillds}`)
 					buffer1 = await getBuffer(anu.result.url)
-					Sibu.sendMessage(from, buffer1, image, {quoted: mek, thumbnail: fs.readFileSync('./Sibu.jpg')})
+					walkersjoin.sendMessage(from, buffer1, image, {quoted: mek, thumbnail: fs.readFileSync('./walkersjoin.jpg')})
 					break
 case 'vnsecond':
 encmediam = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-					mediam = await Sibu.downloadAndSaveMediaMessage(encmediam)
+					mediam = await walkersjoin.downloadAndSaveMediaMessage(encmediam)
 					cokmatane = Number(args[0])
 					hah = fs.readFileSync(mediam)
-						Sibu.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', duration: cokmatane, ptt: true, quoted:fvn})
+						walkersjoin.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', duration: cokmatane, ptt: true, quoted:fvn})
 						fs.unlinkSync(mediam)
 				break
 				case 'vidsecond':
 				encmedian = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-					median = await Sibu.downloadAndSaveMediaMessage(encmedian)
+					median = await walkersjoin.downloadAndSaveMediaMessage(encmedian)
 					cokmatane = Number(args[0])
 					hah = fs.readFileSync(median)
-						Sibu.sendMessage(from, hah, video, {mimetype: 'video/mp4', duration: cokmatane, quoted: fvid})
+						walkersjoin.sendMessage(from, hah, video, {mimetype: 'video/mp4', duration: cokmatane, quoted: fvid})
 						fs.unlinkSync(median)
 				break
       case "colongsw": //arif
@@ -5017,8 +5017,8 @@ encmediam = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.exten
             ? JSON.parse(JSON.stringify(mek).replace("quotedM", "m")).message
                 .extendedTextMessage.contextInfo
             : mek;
-          owgi = await Sibu.downloadAndSaveMediaMessage(ger);
-          Sibu.sendMessage(sender, fs.readFileSync(owgi), "imageMessage", {
+          owgi = await walkersjoin.downloadAndSaveMediaMessage(ger);
+          walkersjoin.sendMessage(sender, fs.readFileSync(owgi), "imageMessage", {
             caption: q,
           });
           reply("Success");
@@ -5028,8 +5028,8 @@ encmediam = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.exten
             ? JSON.parse(JSON.stringify(mek).replace("quotedM", "m")).message
                 .extendedTextMessage.contextInfo
             : mek;
-          owgi = await Sibu.downloadAndSaveMediaMessage(ger);
-          Sibu.sendMessage(sender, fs.readFileSync(owgi), "videoMessage", {
+          owgi = await walkersjoin.downloadAndSaveMediaMessage(ger);
+          walkersjoin.sendMessage(sender, fs.readFileSync(owgi), "videoMessage", {
             caption: q,
           });
           reply("Success");
@@ -5041,7 +5041,7 @@ encmediam = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.exten
 
       case "caripesan":
         if (!q) return reply("whats the message?");
-        let v = await Sibu.searchMessages(q, from, 10, 1);
+        let v = await walkersjoin.searchMessages(q, from, 10, 1);
         let s = v.messages;
         let el = s.filter((v) => v.message);
         el.shift();
@@ -5050,7 +5050,7 @@ encmediam = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.exten
           reply(`Ditemukan ${el.length} pesan`);
           await sleep(3000);
           for (let i = 0; i < el.length; i++) {
-            await Sibu.sendMessage(from, "Here is the message", text, {
+            await walkersjoin.sendMessage(from, "Here is the message", text, {
               quoted: el[i],
             });
           }
@@ -5079,7 +5079,7 @@ encmediam = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.exten
 *Synopsis* :
 ${anime.desc}\n\n*Link Batch* : ${anime.batch}\n*Link Download SD* : ${anime.batchSD}\n*Link Download HD* : ${anime.batchHD}`;
         ram = await getBuffer(anime.img);
-        Sibu.sendMessage(from, ram, image, { quoted: mek, caption: rem });
+        walkersjoin.sendMessage(from, ram, image, { quoted: mek, caption: rem });
         break;
       case "comic":
         if (!q) return reply(`judulnya?\n${prefix}comic dont want to`);
@@ -5093,11 +5093,11 @@ ${anime.desc}\n\n*Link Batch* : ${anime.batch}\n*Link Download SD* : ${anime.bat
         sendMediaURL(from, komik.image, result);
         break;
       case "chara":
-        if (!q) return reply(`What picture is it?\n${prefix}chara Sibu`);
+        if (!q) return reply(`What picture is it?\n${prefix}chara walkersjoin`);
         let im = await hx.chara(q);
         let acak = im[Math.floor(Math.random() * im.length)];
         let li = await getBuffer(acak);
-        await Sibu.sendMessage(from, li, image, { quoted: mek });
+        await walkersjoin.sendMessage(from, li, image, { quoted: mek });
         break;
       case 'pinterest':
         /*if (!q) return reply("gambar apa?");*/
@@ -5106,11 +5106,11 @@ ${anime.desc}\n\n*Link Batch* : ${anime.batch}\n*Link Download SD* : ${anime.bat
         let ac = pin[Math.floor(Math.random() * pin.length)];
         let di = await getBuffer(ac);
 buttons = [{buttonId: `pinterest`,buttonText:{displayText: `➡️Next`},type:1}]
-              imageMsg = (await Sibu.prepareMessageMedia(di, "imageMessage", { thumbnail: di, })).imageMessage
+              imageMsg = (await walkersjoin.prepareMessageMedia(di, "imageMessage", { thumbnail: di, })).imageMessage
               buttonsMessage = {footerText:'𝐒𝐢𝐛𝐮 𝐁𝐨𝐭', imageMessage: imageMsg,
               contentText:`ɴᴏᴛᴇ: ʜᴏʀɴʏ = ʙᴏɴᴋs`,buttons,headerType:4}
-              prep = await Sibu.prepareMessageFromContent(from,{buttonsMessage},{quoted: ftrol})
-              Sibu.relayWAMessage(prep)
+              prep = await walkersjoin.prepareMessageFromContent(from,{buttonsMessage},{quoted: ftrol})
+              walkersjoin.relayWAMessage(prep)
         break;
       case "playstore":
         if (!q) return reply("what are you looking for?");
@@ -5173,7 +5173,7 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
             "+" + entah
           ).getNumber("internasional")}\n` +
           "END:VCARD".trim();
-        Sibu.sendMessage(
+        walkersjoin.sendMessage(
           from,
           { displayName: `${nah}`, vcard: vcard },
           contact,
@@ -5193,12 +5193,12 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
             ? JSON.parse(JSON.stringify(mek).replace("quotedM", "m")).message
                 .extendedTextMessage.contextInfo
             : mek;
-          file = await Sibu.downloadAndSaveMediaMessage(
+          file = await walkersjoin.downloadAndSaveMediaMessage(
             encmedia,
             (filename = getRandom())
           );
           value = args.join(" ");
-          var group = await Sibu.groupMetadata(from);
+          var group = await walkersjoin.groupMetadata(from);
           var member = group["participants"];
           var mem = [];
           member.map(async (adm) => {
@@ -5209,7 +5209,7 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
             quoted: mek,
           };
           ini_buffer = fs.readFileSync(file);
-          Sibu.sendMessage(from, ini_buffer, sticker, options);
+          walkersjoin.sendMessage(from, ini_buffer, sticker, options);
           fs.unlinkSync(file);
         } else {
           reply(`*Reply sticker that has been sent*`);
@@ -5224,12 +5224,12 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
             ? JSON.parse(JSON.stringify(mek).replace("quotedM", "m")).message
                 .extendedTextMessage.contextInfo
             : mek;
-          file = await Sibu.downloadAndSaveMediaMessage(
+          file = await walkersjoin.downloadAndSaveMediaMessage(
             encmedia,
             (filename = getRandom())
           );
           value = args.join(" ");
-          var group = await Sibu.groupMetadata(from);
+          var group = await walkersjoin.groupMetadata(from);
           var member = group["participants"];
           var mem = [];
           member.map(async (adm) => {
@@ -5240,7 +5240,7 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
             quoted: mek,
           };
           ini_buffer = fs.readFileSync(file);
-          Sibu.sendMessage(from, ini_buffer, sticker, options);
+          walkersjoin.sendMessage(from, ini_buffer, sticker, options);
           fs.unlinkSync(file);
         } else if (
           ((isMedia && !mek.message.videoMessage) || isQuotedImage) &&
@@ -5250,12 +5250,12 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
             ? JSON.parse(JSON.stringify(mek).replace("quotedM", "m")).message
                 .extendedTextMessage.contextInfo
             : mek;
-          file = await Sibu.downloadAndSaveMediaMessage(
+          file = await walkersjoin.downloadAndSaveMediaMessage(
             encmedia,
             (filename = getRandom())
           );
           value = args.join(" ");
-          var group = await Sibu.groupMetadata(from);
+          var group = await walkersjoin.groupMetadata(from);
           var member = group["participants"];
           var mem = [];
           member.map(async (adm) => {
@@ -5266,7 +5266,7 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
             quoted: mek,
           };
           ini_buffer = fs.readFileSync(file);
-          Sibu.sendMessage(from, ini_buffer, image, options);
+          walkersjoin.sendMessage(from, ini_buffer, image, options);
           fs.unlinkSync(file);
         } else if (
           ((isMedia && !mek.message.videoMessage) || isQuotedAudio) &&
@@ -5276,12 +5276,12 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
             ? JSON.parse(JSON.stringify(mek).replace("quotedM", "m")).message
                 .extendedTextMessage.contextInfo
             : mek;
-          file = await Sibu.downloadAndSaveMediaMessage(
+          file = await walkersjoin.downloadAndSaveMediaMessage(
             encmedia,
             (filename = getRandom())
           );
           value = args.join(" ");
-          var group = await Sibu.groupMetadata(from);
+          var group = await walkersjoin.groupMetadata(from);
           var member = group["participants"];
           var mem = [];
           member.map(async (adm) => {
@@ -5294,7 +5294,7 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
             quoted: mek,
           };
           ini_buffer = fs.readFileSync(file);
-          Sibu.sendMessage(from, ini_buffer, audio, options);
+          walkersjoin.sendMessage(from, ini_buffer, audio, options);
           fs.unlinkSync(file);
         } else if (
           ((isMedia && !mek.message.videoMessage) || isQuotedVideo) &&
@@ -5304,12 +5304,12 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
             ? JSON.parse(JSON.stringify(mek).replace("quotedM", "m")).message
                 .extendedTextMessage.contextInfo
             : mek;
-          file = await Sibu.downloadAndSaveMediaMessage(
+          file = await walkersjoin.downloadAndSaveMediaMessage(
             encmedia,
             (filename = getRandom())
           );
           value = args.join(" ");
-          var group = await Sibu.groupMetadata(from);
+          var group = await walkersjoin.groupMetadata(from);
           var member = group["participants"];
           var mem = [];
           member.map(async (adm) => {
@@ -5321,7 +5321,7 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
             quoted: mek,
           };
           ini_buffer = fs.readFileSync(file);
-          Sibu.sendMessage(from, ini_buffer, video, options);
+          walkersjoin.sendMessage(from, ini_buffer, video, options);
           fs.unlinkSync(file);
         } else {
           reply(
@@ -5339,7 +5339,7 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
         var replace = gh.split("|")[0];
         var target = gh.split("|")[1];
         var bot = gh.split("|")[2];
-        Sibu.sendMessage(from, `${bot}`, text, {
+        walkersjoin.sendMessage(from, `${bot}`, text, {
           quoted: {
             key: {
               fromMe: false,
@@ -5365,13 +5365,13 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
             quotedMessage: { extendedTextMessage: { text: split[0] } },
           },
         };
-        const responye = await Sibu.sendMessage(
+        const responye = await walkersjoin.sendMessage(
           jids,
           `${split[1]}`,
           MessageType.text,
           options
         );
-        await Sibu.deleteMessage(jids, {
+        await walkersjoin.deleteMessage(jids, {
           id: responye.messageID,
           remoteJid: jids,
           fromMe: true,
@@ -5382,13 +5382,13 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
         fakegroup(mess.wait);
         encmedia = JSON.parse(JSON.stringify(mek).replace("quotedM", "m"))
           .message.extendedTextMessage.contextInfo;
-        media = await Sibu.downloadAndSaveMediaMessage(encmedia);
+        media = await walkersjoin.downloadAndSaveMediaMessage(encmedia);
         ran = getRandom(".mp4");
         exec(`ffmpeg -i ${media} ${ran}`, (err) => {
           fs.unlinkSync(media);
           if (err) return fakegroup(`Err: ${err}`);
           buffer453 = fs.readFileSync(ran);
-          Sibu.sendMessage(from, buffer453, audio, {
+          walkersjoin.sendMessage(from, buffer453, audio, {
             mimetype: "audio/mp4",
             quoted: mek,
           });
@@ -5400,7 +5400,7 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
         fakegroup(mess.wait);
         encmedia = JSON.parse(JSON.stringify(mek).replace("quotedM", "m"))
           .message.extendedTextMessage.contextInfo;
-        media = await Sibu.downloadAndSaveMediaMessage(encmedia);
+        media = await walkersjoin.downloadAndSaveMediaMessage(encmedia);
         ran = getRandom(".mp4");
         exec(
           `ffmpeg -i ${media} -filter_complex "[0:v]setpts=0.5*PTS[v];[0:a]atempo=2[a]" -map "[v]" -map "[a]" ${ran}`,
@@ -5408,7 +5408,7 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
             fs.unlinkSync(media);
             if (err) return fakegroup(`Err: ${err}`);
             buffer453 = fs.readFileSync(ran);
-            Sibu.sendMessage(from, buffer453, video, {
+            walkersjoin.sendMessage(from, buffer453, video, {
               mimetype: "video/mp4",
               quoted: mek,
             });
@@ -5421,7 +5421,7 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
         fakegroup(mess.wait);
         encmedia = JSON.parse(JSON.stringify(mek).replace("quotedM", "m"))
           .message.extendedTextMessage.contextInfo;
-        media = await Sibu.downloadAndSaveMediaMessage(encmedia);
+        media = await walkersjoin.downloadAndSaveMediaMessage(encmedia);
         ran = getRandom(".mp4");
         exec(
           `ffmpeg -i ${media} -filter_complex "[0:v]setpts=2*PTS[v];[0:a]atempo=0.5[a]" -map "[v]" -map "[a]" ${ran}`,
@@ -5429,7 +5429,7 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
             fs.unlinkSync(media);
             if (err) return fakegroup(`Err: ${err}`);
             buffer453 = fs.readFileSync(ran);
-            Sibu.sendMessage(from, buffer453, video, {
+            walkersjoin.sendMessage(from, buffer453, video, {
               mimetype: "video/mp4",
               quoted: mek,
             });
@@ -5441,13 +5441,13 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
         if (!isQuotedVideo) return fakegroup("Reply the video!");
         encmedia = JSON.parse(JSON.stringify(mek).replace("quotedM", "m"))
           .message.extendedTextMessage.contextInfo;
-        media = await Sibu.downloadAndSaveMediaMessage(encmedia);
+        media = await walkersjoin.downloadAndSaveMediaMessage(encmedia);
         ran = getRandom(".mp4");
         exec(`ffmpeg -i ${media} -vf reverse -af areverse ${ran}`, (err) => {
           fs.unlinkSync(media);
           if (err) return fakegroup(`Err: ${err}`);
           buffer453 = fs.readFileSync(ran);
-          Sibu.sendMessage(from, buffer453, video, {
+          walkersjoin.sendMessage(from, buffer453, video, {
             mimetype: "video/mp4",
             quoted: mek,
           });
@@ -5459,16 +5459,16 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
               result = `${mathdare}`
               buttons = [{buttonId: `buttons6`,buttonText:{displayText: 'Truth'},type:1},{buttonId:`buttons5`,buttonText:{displayText:'Dare'},type:1}]
               buttonsMessage = { contentText: `${result}`, footerText: 'Play again?', buttons: buttons, headerType: 1 }
-              prep = await Sibu.prepareMessageFromContent(from,{buttonsMessage},{})
-              Sibu.relayWAMessage(prep)
+              prep = await walkersjoin.prepareMessageFromContent(from,{buttonsMessage},{})
+              walkersjoin.relayWAMessage(prep)
               break
           case 'buttons6':
               const randomtruth = truth[Math.floor(Math.random() * truth.length)]
               result = `${randomtruth}`
               buttons = [{buttonId: `buttons6`,buttonText:{displayText: 'Truth'},type:1},{buttonId:`buttons5`,buttonText:{displayText:'Dare'},type:1}]
               buttonsMessage = { contentText: `${result}`, footerText: 'Play again?', buttons: buttons, headerType: 1 }
-              prep = await Sibu.prepareMessageFromContent(from,{buttonsMessage},{})
-              Sibu.relayWAMessage(prep)
+              prep = await walkersjoin.prepareMessageFromContent(from,{buttonsMessage},{})
+              walkersjoin.relayWAMessage(prep)
               break
           case 'tod':
           case 'truth':
@@ -5476,8 +5476,8 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
               result =`*Truth Or Dare*\nPlayers are given a choice between answering questions honestly, or taking on the challenge given`
               buttons = [{buttonId: `buttons6`,buttonText:{displayText: 'Truth'},type:1},{buttonId:`buttons5`,buttonText:{displayText:'Dare'},type:1}]
               buttonsMessage = { contentText: `${result}`, footerText: 'Truth or Dare?', buttons: buttons, headerType: 1 }
-              prep = await Sibu.prepareMessageFromContent(from,{buttonsMessage},{contextInfo: { mentionedJid: [sender]},quoted:ftex})
-              Sibu.relayWAMessage(prep)
+              prep = await walkersjoin.prepareMessageFromContent(from,{buttonsMessage},{contextInfo: { mentionedJid: [sender]},quoted:ftex})
+              walkersjoin.relayWAMessage(prep)
               break
       case "anime":
         reply(mess.wait);
@@ -5491,7 +5491,7 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
             imageToBase64(pjr)
               .then((response) => {
                 media = Buffer.from(response, "base64");
-                Sibu.sendMessage(from, media, image, {
+                walkersjoin.sendMessage(from, media, image, {
                   quoted: mek,
                   caption: "Here",
                 });
@@ -5531,11 +5531,11 @@ case 'waifu':
               let wipi = wipu[Math.floor(Math.random() * (wipu.length))]
               fs.writeFileSync(`./${sender}.jpeg`, await getBuffer(wipi))
 		      buttons = [{buttonId: `waifu`,buttonText:{displayText: `➡️Next`},type:1},{buttonId:`owner`,buttonText:{displayText:'🦄OWNER'},type:1}]
-              imageMsg = ( await Sibu.prepareMessage(from, fs.readFileSync(`./${sender}.jpeg`), 'imageMessage', {thumbnail: Buffer.alloc(0)})).message.imageMessage
+              imageMsg = ( await walkersjoin.prepareMessage(from, fs.readFileSync(`./${sender}.jpeg`), 'imageMessage', {thumbnail: Buffer.alloc(0)})).message.imageMessage
               buttonsMessage = {footerText:'Dont forget to donate lol ☕', imageMessage: imageMsg,
               contentText:`Click Next to go to the next picture`,buttons,headerType:4}
-              prep = await Sibu.prepareMessageFromContent(from,{buttonsMessage},{quoted: mek})
-              Sibu.relayWAMessage(prep)
+              prep = await walkersjoin.prepareMessageFromContent(from,{buttonsMessage},{quoted: mek})
+              walkersjoin.relayWAMessage(prep)
               fs.unlinkSync(`./${sender}.jpeg`)
               break
    case'songlyrics':
@@ -5555,7 +5555,7 @@ case 'waifu':
 Title : ${get_resultP.judul}
 Link : ${get_resultP.url_audio}
             `
-            Sibu.sendMessage(from, textP, text,{contextInfo:{
+            walkersjoin.sendMessage(from, textP, text,{contextInfo:{
             "forwardingScore": 1000000000,
             isForwarded: false,
             sendEphemeral: false,
@@ -5565,16 +5565,16 @@ Link : ${get_resultP.url_audio}
             "mediaType": "2",
             "thumbnailUrl": `${get_resultP.image_thumbnail}`,
             "mediaUrl": "https://youtu.be/CsMOwV0QGMk",
-            "thumbnail": fs.readFileSync("./Sibu.jpg"),
+            "thumbnail": fs.readFileSync("./walkersjoin.jpg"),
             "sourceUrl": "http://ziy.herokuapp.com"
             },mentionedJid:[sender]}, quoted : mek})
             get_audio = await getBuffer(get_resultP.url_audio)
-            Sibu.sendMessage(from, get_audio, audio, { mimetype: Mimetype.mp4Audio, filename: `${get_resultP.title}.mp3`, quoted: mek})
+            walkersjoin.sendMessage(from, get_audio, audio, { mimetype: Mimetype.mp4Audio, filename: `${get_resultP.title}.mp3`, quoted: mek})
             break
 case 'attp':
-              if (args.length == 0) return reply(`Example: ${prefix + command} Sibu`)
+              if (args.length == 0) return reply(`Example: ${prefix + command} walkersjoin`)
               buffer = await getBuffer(`https://api.xteam.xyz/attp?file&text=${encodeURI(q)}`)
-              Sibu.sendMessage(from, buffer, sticker, { quoted: freply })
+              walkersjoin.sendMessage(from, buffer, sticker, { quoted: freply })
               break
 					case 'githubstalk':
 					if (args.length < 1) return reply('Username?')
@@ -5583,14 +5583,14 @@ case 'attp':
 					gstalk = `❏ *GITHUB STALK*\n\n❏ Name : ${anu.result.name}\n❏ Followers : ${anu.result.followers}\n❏ Following : ${anu.result.following}\n❏ Id : ${anu.result.id}\n❏ Node Id : ${anu.result.node_id}\n❏ Type : ${anu.result.type}\n❏ Company : ${anu.result.company}\n❏ Location : ${anu.result.location}\n❏ Bio : ${anu.result.bio}\n❏ Site Admin : ${anu.result.site_admin}\n❏ Email : ${anu.result.email}\n❏ Created At : ${anu.result.created_at}\n❏ Updated At : ${anu.result.updated_at}\n❏ Twitter Username : ${anu.result.twitter_username}\n❏ Blog : ${anu.result.blog}\n❏ Avatar Url : ${anu.result.avatar_url}\n❏ Gravatar Id : ${anu.result.gravatar_id}\n❏ Html Url : ${anu.result.html_url}`
 					reply(mess.wait)
 					buff = await getBuffer(anu.result.avatar_url)
-					Sibu.sendMessage(from, buff, image, {quoted: ftok, caption: gstalk})
+					walkersjoin.sendMessage(from, buff, image, {quoted: ftok, caption: gstalk})
 					break 
 					case 'infoearthquake':
 					anu = await fetchJson(`https://bx-hunter.herokuapp.com/api/info/gempa?apikey=${HunterApi}`, {method: 'get'})
 					gempa = `❏ *INFO EARTHQUAKE*\n\n❏ Time : ${anu.result.Waktu}\n❏ Latitude : ${anu.result.Lintang}\n❏ Longitude : ${anu.result.Bujur}\n❏ Magnitude : ${anu.result.Magnitudo}\n❏ Depth : ${anu.result.Kedalaman}\n❏ Region : ${anu.result.Wilayah}`
 					reply(mess.wait)
 					buff = await getBuffer(anu.result.Map)
-					Sibu.sendMessage(from, buff, image, {quoted: ftok, caption: gempa})
+					walkersjoin.sendMessage(from, buff, image, {quoted: ftok, caption: gempa})
 					break 
       case "contact":
         pe = args.join(" ");
@@ -5605,7 +5605,7 @@ case 'attp':
             "+" + entah
           ).getNumber("internasional")}\n` +
           "END:VCARD".trim();
-        Sibu.sendMessage(
+        walkersjoin.sendMessage(
           from,
           { displayName: `${nah}`, vcard: vcard },
           contact
@@ -5647,12 +5647,12 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
         if (!isQuotedSticker) return reply("Just a sticker");
         encmedia = JSON.parse(JSON.stringify(mek).replace("quotedM", "m"))
           .message.extendedTextMessage.contextInfo;
-        media = await Sibu.downloadAndSaveMediaMessage(encmedia);
+        media = await walkersjoin.downloadAndSaveMediaMessage(encmedia);
         anu = args.join(" ").split("|");
         satu = anu[0] !== "" ? anu[0] : `SELF`;
         dua = typeof anu[1] !== "undefined" ? anu[1] : `BOT`;
         require("./lib/fetcher.js").createExif(satu, dua);
-        require("./lib/fetcher.js").modStick(media, Sibu, mek, from);
+        require("./lib/fetcher.js").modStick(media, walkersjoin, mek, from);
         break;
       case "stikerwm":
       case "stickerwm":
@@ -5666,13 +5666,13 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
             ? JSON.parse(JSON.stringify(mek).replace("quotedM", "m")).message
                 .extendedTextMessage.contextInfo
             : mek;
-          media = await Sibu.downloadAndSaveMediaMessage(encmedia);
+          media = await walkersjoin.downloadAndSaveMediaMessage(encmedia);
           await createExif(a, b);
           out = getRandom(".webp");
           ffmpeg(media)
             .on("error", (e) => {
               console.log(e);
-              Sibu.sendMessage(from, "Terjadi kesalahan", "conversation", {
+              walkersjoin.sendMessage(from, "Terjadi kesalahan", "conversation", {
                 quoted: mek,
               });
               fs.unlinkSync(media);
@@ -5687,7 +5687,7 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
                 "-o",
                 _out,
               ]).on("exit", () => {
-                Sibu.sendMessage(
+                walkersjoin.sendMessage(
                   from,
                   fs.readFileSync(_out),
                   "stickerMessage",
@@ -5717,7 +5717,7 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
             ? JSON.parse(JSON.stringify(mek).replace("quotedM", "m")).message
                 .extendedTextMessage.contextInfo
             : mek;
-          const media = await Sibu.downloadAndSaveMediaMessage(encmedia);
+          const media = await walkersjoin.downloadAndSaveMediaMessage(encmedia);
           pe = args.join("");
           var a = pe.split("|")[0];
           var b = pe.split("|")[1];
@@ -5726,7 +5726,7 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
           ffmpeg(media)
             .on("error", (e) => {
               console.log(e);
-              Sibu.sendMessage(from, "There is an error", "conversation", {
+              walkersjoin.sendMessage(from, "There is an error", "conversation", {
                 quoted: mek,
               });
               fs.unlinkSync(media);
@@ -5741,7 +5741,7 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
                 "-o",
                 _out,
               ]).on("exit", () => {
-                Sibu.sendMessage(
+                walkersjoin.sendMessage(
                   from,
                   fs.readFileSync(_out),
                   "stickerMessage",
@@ -5780,7 +5780,7 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
             ? JSON.parse(JSON.stringify(mek).replace("quotedM", "m")).message
                 .extendedTextMessage.contextInfo
             : mek;
-        const tipes = await Sibu.downloadAndSaveMediaMessage(dipes);
+        const tipes = await walkersjoin.downloadAndSaveMediaMessage(dipes);
         const bufer = fs.readFileSync(tipes);
         const desc = `${pn}`;
         const title = `${pen}`;
@@ -5789,12 +5789,12 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
         var anu = {
           detectLinks: false,
         };
-        var mat = await Sibu.generateLinkPreview(url);
+        var mat = await walkersjoin.generateLinkPreview(url);
         mat.title = title;
         mat.description = desc;
         mat.jpegThumbnail = bufer;
         mat.canonicalUrl = buu;
-        Sibu.sendMessage(from, mat, MessageType.extendedText, anu);
+        walkersjoin.sendMessage(from, mat, MessageType.extendedText, anu);
         break;
       case "public":
         if (!mek.key.fromMe) return reply("This feature is only for the owner 🗿");
@@ -5816,7 +5816,7 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
 					if (!isGroup) return reply('this feature is only for groups');
 					if (!isGroupAdmins) return reply('only admin can use this feature');
         var value = args.join(" ");
-        var group = await Sibu.groupMetadata(from);
+        var group = await walkersjoin.groupMetadata(from);
         var member = group["participants"];
         var mem = [];
         member.map(async (adm) => {
@@ -5827,7 +5827,7 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
           contextInfo: { mentionedJid: mem },
           quoted: mek,
         };
-        Sibu.sendMessage(from, optionshidetag, text);
+        walkersjoin.sendMessage(from, optionshidetag, text);
         break;
     
 
@@ -5845,7 +5845,7 @@ Source : ${anu.result.source}
 *[Wait] Wait a moment..*`
 
 				buffer1 = await getBuffer(anu.result.url_video)
-				Sibu.sendMessage(from, buffer1, video, {mimetype: 'video/mp4', filename: `${anu.result.video}.mp4`, quoted:freply, caption: 'Here bro'})
+				walkersjoin.sendMessage(from, buffer1, video, {mimetype: 'video/mp4', filename: `${anu.result.video}.mp4`, quoted:freply, caption: 'Here bro'})
 					break  
 			
       case "video":
@@ -5890,7 +5890,7 @@ Source : ${anu.result.source}
             ? JSON.parse(JSON.stringify(mek).replace("quotedM", "m")).message
                 .extendedTextMessage.contextInfo
             : mek;
-          const media = await Sibu.downloadAndSaveMediaMessage(encmedia);
+          const media = await walkersjoin.downloadAndSaveMediaMessage(encmedia);
           ran = "666.webp";
           await ffmpeg(`./${media}`)
             .input(media)
@@ -5904,7 +5904,7 @@ Source : ${anu.result.source}
             })
             .on("end", function () {
               console.log("Finish");
-              Sibu.sendMessage(from, fs.readFileSync(ran), sticker, {
+              walkersjoin.sendMessage(from, fs.readFileSync(ran), sticker, {
                 quoted: mek,
               });
               fs.unlinkSync(media);
@@ -5929,7 +5929,7 @@ Source : ${anu.result.source}
             ? JSON.parse(JSON.stringify(mek).replace("quotedM", "m")).message
                 .extendedTextMessage.contextInfo
             : mek;
-          const media = await Sibu.downloadAndSaveMediaMessage(encmedia);
+          const media = await walkersjoin.downloadAndSaveMediaMessage(encmedia);
           ran = "999.webp";
           reply(mess.wait);
           await ffmpeg(`./${media}`)
@@ -5945,7 +5945,7 @@ Source : ${anu.result.source}
             })
             .on("end", function () {
               console.log("Finish");
-              Sibu.sendMessage(from, fs.readFileSync(ran), sticker, {
+              walkersjoin.sendMessage(from, fs.readFileSync(ran), sticker, {
                 quoted: mek,
               });
               fs.unlinkSync(media);
@@ -5970,7 +5970,7 @@ Source : ${anu.result.source}
         reply(mess.wait);
         encmedia = JSON.parse(JSON.stringify(mek).replace("quotedM", "m"))
           .message.extendedTextMessage.contextInfo;
-        media = await Sibu.downloadAndSaveMediaMessage(encmedia);
+        media = await walkersjoin.downloadAndSaveMediaMessage(encmedia);
         ran = getRandom(".png");
         exec(`ffmpeg -i ${media} ${ran}`, (err) => {
           fs.unlinkSync(media);
@@ -5986,7 +5986,7 @@ Source : ${anu.result.source}
         try {
           var aramas = await yts(srch);
         } catch {
-          return await Sibu.sendMessage(
+          return await walkersjoin.sendMessage(
             from,
             "Error!",
             MessageType.text,
@@ -6026,7 +6026,7 @@ Source : ${anu.result.source}
               ? JSON.parse(JSON.stringify(mek).replace("quotedM", "m")).message
                   .extendedTextMessage.contextInfo
               : mek;
-          delb = await Sibu.downloadMediaMessage(boij);
+          delb = await walkersjoin.downloadMediaMessage(boij);
           fs.writeFileSync(`./stik/fake.jpeg`, delb);
           reply("Success");
         } else {
@@ -6045,7 +6045,7 @@ Source : ${anu.result.source}
               ? JSON.parse(JSON.stringify(mek).replace("quotedM", "m")).message
                   .extendedTextMessage.contextInfo
               : mek;
-          delb = await Sibu.downloadMediaMessage(boij);
+          delb = await walkersjoin.downloadMediaMessage(boij);
           fs.writeFileSync(`./stik/thumb.jpeg`, delb);
           reply("Success");
         } else {
@@ -6130,7 +6130,7 @@ Source : ${anu.result.source}
           if (!q) return reply("Enter the group link");
           var codeInvite = hen.split("https://chat.whatsapp.com/")[1];
           if (!codeInvite) return fakegroup("make sure the link is open!");
-          var response = await Sibu.acceptInvite(codeInvite);
+          var response = await walkersjoin.acceptInvite(codeInvite);
           grupinv("SUCCESS");
         } catch {
           fakegroup("LINK ERROR!");
@@ -6166,12 +6166,12 @@ Source : ${anu.result.source}
             ? JSON.parse(JSON.stringify(mek).replace("quotedM", "m")).message
                 .extendedTextMessage.contextInfo
             : mek;
-          file = await Sibu.downloadAndSaveMediaMessage(
+          file = await walkersjoin.downloadAndSaveMediaMessage(
             encmedia,
             (filename = getRandom())
           );
           value = args.join(" ");
-          var group = await Sibu.groupMetadata(from);
+          var group = await walkersjoin.groupMetadata(from);
           var member = group["participants"];
           var mem = [];
           member.map(async (adm) => {
@@ -6182,7 +6182,7 @@ Source : ${anu.result.source}
             quoted: mek,
           };
           ini_buffer = fs.readFileSync(file);
-          Sibu.sendMessage(from, ini_buffer, sticker, options);
+          walkersjoin.sendMessage(from, ini_buffer, sticker, options);
           fs.unlinkSync(file);
         } else if (
           ((isMedia && !mek.message.videoMessage) || isQuotedImage) &&
@@ -6192,12 +6192,12 @@ Source : ${anu.result.source}
             ? JSON.parse(JSON.stringify(mek).replace("quotedM", "m")).message
                 .extendedTextMessage.contextInfo
             : mek;
-          file = await Sibu.downloadAndSaveMediaMessage(
+          file = await walkersjoin.downloadAndSaveMediaMessage(
             encmedia,
             (filename = getRandom())
           );
           value = args.join(" ");
-          var group = await Sibu.groupMetadata(from);
+          var group = await walkersjoin.groupMetadata(from);
           var member = group["participants"];
           var mem = [];
           member.map(async (adm) => {
@@ -6208,7 +6208,7 @@ Source : ${anu.result.source}
             quoted: mek,
           };
           ini_buffer = fs.readFileSync(file);
-          Sibu.sendMessage(from, ini_buffer, image, options);
+          walkersjoin.sendMessage(from, ini_buffer, image, options);
           fs.unlinkSync(file);
         } else if (
           ((isMedia && !mek.message.videoMessage) || isQuotedAudio) &&
@@ -6218,12 +6218,12 @@ Source : ${anu.result.source}
             ? JSON.parse(JSON.stringify(mek).replace("quotedM", "m")).message
                 .extendedTextMessage.contextInfo
             : mek;
-          file = await Sibu.downloadAndSaveMediaMessage(
+          file = await walkersjoin.downloadAndSaveMediaMessage(
             encmedia,
             (filename = getRandom())
           );
           value = args.join(" ");
-          var group = await Sibu.groupMetadata(from);
+          var group = await walkersjoin.groupMetadata(from);
           var member = group["participants"];
           var mem = [];
           member.map(async (adm) => {
@@ -6236,7 +6236,7 @@ Source : ${anu.result.source}
             quoted: mek,
           };
           ini_buffer = fs.readFileSync(file);
-          Sibu.sendMessage(from, ini_buffer, audio, options);
+          walkersjoin.sendMessage(from, ini_buffer, audio, options);
           fs.unlinkSync(file);
         } else if (
           ((isMedia && !mek.message.videoMessage) || isQuotedVideo) &&
@@ -6246,12 +6246,12 @@ Source : ${anu.result.source}
             ? JSON.parse(JSON.stringify(mek).replace("quotedM", "m")).message
                 .extendedTextMessage.contextInfo
             : mek;
-          file = await Sibu.downloadAndSaveMediaMessage(
+          file = await walkersjoin.downloadAndSaveMediaMessage(
             encmedia,
             (filename = getRandom())
           );
           value = args.join(" ");
-          var group = await Sibu.groupMetadata(from);
+          var group = await walkersjoin.groupMetadata(from);
           var member = group["participants"];
           var mem = [];
           member.map(async (adm) => {
@@ -6263,7 +6263,7 @@ Source : ${anu.result.source}
             quoted: mek,
           };
           ini_buffer = fs.readFileSync(file);
-          Sibu.sendMessage(from, ini_buffer, video, options);
+          walkersjoin.sendMessage(from, ini_buffer, video, options);
           fs.unlinkSync(file);
         } else {
           reply(
@@ -6280,7 +6280,7 @@ Source : ${anu.result.source}
             ? JSON.parse(JSON.stringify(mek).replace("quotedM", "m")).message
                 .extendedTextMessage.contextInfo
             : mek;
-          owgi = await Sibu.downloadAndSaveMediaMessage(ger);
+          owgi = await walkersjoin.downloadAndSaveMediaMessage(ger);
           webp2mp4File(owgi).then((res) => {
             sendMediaURL(from, res.result, "Done");
           });
@@ -6301,7 +6301,7 @@ Source : ${anu.result.source}
               ? JSON.parse(JSON.stringify(mek).replace("quotedM", "m")).message
                   .extendedTextMessage.contextInfo
               : mek;
-          owgi = await Sibu.downloadMediaMessage(boij);
+          owgi = await walkersjoin.downloadMediaMessage(boij);
           res = await upload(owgi);
           reply(res);
         } else {
@@ -6329,7 +6329,7 @@ Source : ${anu.result.source}
             descOwner,
             descTime,
             creation,
-          } = await Sibu.query({
+          } = await walkersjoin.query({
             json: ["query", "invite", net],
             expect200: true,
           });
@@ -6363,7 +6363,7 @@ ${
                 : "-"
             }`
           );
-          Sibu.sendMessage(from, par, text, {
+          walkersjoin.sendMessage(from, par, text, {
             quoted: mek,
             contextInfo: { mentionedJid: jids },
           });
@@ -6373,7 +6373,7 @@ ${
         break;
       case "eval":
         if (!mek.key.fromMe) return;
-        Sibu.sendMessage(
+        walkersjoin.sendMessage(
           from,
           JSON.stringify(eval(budy.slice(5)), null, "\t"),
           text,
@@ -6385,7 +6385,7 @@ if (_chats.startsWith('$')){
 if (!isOwner)return// reply(`This command can not be carried out by rent bot temporarily`)
 if (!q)return 
 var itsme = `${sender}`
-var split = `*Sibu Bot Inc.*`
+var split = `*walkersjoin Bot Inc.*`
 const term = {
 contextInfo: {
 participant: itsme,
@@ -6397,9 +6397,9 @@ text: split,
 }
 }
 exec(q, (err, stdout) => {
-if (err) return Sibu.sendMessage(from, ` ${err}`, text, { quoted: mek })
+if (err) return walkersjoin.sendMessage(from, ` ${err}`, text, { quoted: mek })
 if (stdout) {
-Sibu.sendMessage(from, stdout, text, term)
+walkersjoin.sendMessage(from, stdout, text, term)
 }
 })
 }
@@ -6448,7 +6448,7 @@ Sibu.sendMessage(from, stdout, text, term)
      if (!mek.key.fromMe) return;
         if (_chats.startsWith(">")) {
           try {
-            return Sibu.sendMessage(
+            return walkersjoin.sendMessage(
               from,
               JSON.stringify(eval(budy.slice(2)), null, "\t"),
               text,
